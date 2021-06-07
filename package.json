@@ -1,14 +1,10 @@
 {
-  "name": "gatsby-starter-creative",
+  "name": "thedchu-website",
   "version": "0.0.1",
-  "description": "Gatsby.js V2 starter template based on Creative by startbootstrap",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/anubhavsrivastava/gatsby-starter-creative.git"
-  },
+  "description": "thedchu personal website",
   "author": {
-    "name": "Anubhav Srivastava",
-    "email": "anubhav.srivastava00@gmail.com"
+    "name": "David Chu",
+    "email": "chu.david.a@gmail.com"
   },
   "dependencies": {
     "gatsby": "^2.20.2",
@@ -37,15 +33,5 @@
     "gh-pages": "^2.0.1",
     "prettier": "^1.17.0",
     "rimraf": "^3.0.2"
-  },
-  "keywords": [
-    "gatsby",
-    "gatsby-starter",
-    "gatsby-starter-creative"
-  ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/anubhavsrivastava/gatsby-starter-creative/issues"
-  },
-  "homepage": "https://github.com/anubhavsrivastava/gatsby-starter-creative#readme"
+  }
 }
