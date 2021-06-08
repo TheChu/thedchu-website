@@ -1,6 +1,5 @@
 import React, { ReactElement } from 'react';
 import config from '../../config';
-import ContactUs from '../components/ContactUs';
 import Footer from '../components/Footer';
 import Gallery from '../components/Gallery';
 import Header from '../components/Header';
@@ -81,8 +80,6 @@ const IndexPage = (): ReactElement => (
     <section id="portfolio">
       <Gallery images={imgSet} />
     </section>
-
-    <ContactUs />
 
     <Footer />
   </Layout>

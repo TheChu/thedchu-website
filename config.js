@@ -14,22 +14,28 @@ module.exports = {
   // social
   socialLinks: [
     {
+      style: 'b',
       icon: 'fa-instagram',
       name: 'Instagram',
       url: 'https://instagram.com/thedchu',
     },
     {
+      style: 'b',
+      icon: 'fa-linkedin-in',
+      name: 'Linkedin',
+      url: 'https://linkedin.com/in/thedchu/',
+    },
+    {
+      style: 'b',
       icon: 'fa-github',
       name: 'Github',
       url: 'https://github.com/thechu',
     },
     {
-      icon: 'fa-linkedin-in',
-      name: 'Linkedin',
-      url: 'https://linkedin.com/in/thedchu/',
+      style: 's',
+      icon: 'fa-envelope',
+      name: 'Email',
+      url: 'mailto:chu.david.a@gmail.com',
     },
   ],
-  email: 'chu.david.a@gmail.com',
-  phone: '909-575-7533',
-  address: 'Seattle, WA',
 };
