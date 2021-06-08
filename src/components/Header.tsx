@@ -1,38 +1,45 @@
-import React, { Component } from 'react';
-import Scroll from './Scroll';
+import React, { Component, ReactElement } from 'react';
 import config from '../../config';
-export default class Header extends Component {
-  constructor(props) {
+import Scroll from './Scroll';
+
+interface HeaderState {
+  openMenu: boolean;
+  visibilityClass: string;
+}
+
+export default class Header extends Component<{}, HeaderState> {
+  constructor(props = {}) {
     super(props);
     this.state = {
       openMenu: false,
       visibilityClass: '',
     };
   }
-  toggleMenu = value => {
+
+  componentDidMount(): void {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount(): void {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  toggleMenu = (value: boolean): void => {
     this.setState({ openMenu: value });
   };
-  handleScroll = () => {
+
+  handleScroll = (): void => {
     const { visibilityClass } = this.state;
     if (window.pageYOffset > 300) {
       if (visibilityClass !== 'navbar-scrolled') {
         this.setState({ visibilityClass: 'navbar-scrolled' });
       }
-    } else {
-      if (visibilityClass === 'navbar-scrolled') {
-        this.setState({ visibilityClass: '' });
-      }
+    } else if (visibilityClass === 'navbar-scrolled') {
+      this.setState({ visibilityClass: '' });
     }
   };
 
-  componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
-  }
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
-  }
-
-  render() {
+  render(): ReactElement {
     const { openMenu, visibilityClass } = this.state;
     return (
       <nav
@@ -45,7 +52,7 @@ export default class Header extends Component {
           </a>
 
           <button
-            onClick={_ => this.toggleMenu(!openMenu)}
+            onClick={() => this.toggleMenu(!openMenu)}
             className={`navbar-toggler navbar-toggler-right ${
               openMenu ? '' : 'collapsed'
             }`}
@@ -54,7 +61,7 @@ export default class Header extends Component {
             aria-expanded={openMenu}
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon" />
           </button>
 
           <div
@@ -64,7 +71,7 @@ export default class Header extends Component {
             <ul className="navbar-nav ml-auto my-2 my-lg-0">
               <li className="nav-item">
                 <Scroll
-                  onClick={_ => this.toggleMenu(!openMenu)}
+                  onClick={() => this.toggleMenu(!openMenu)}
                   type="id"
                   element="about"
                 >
@@ -75,7 +82,7 @@ export default class Header extends Component {
               </li>
               <li className="nav-item">
                 <Scroll
-                  onClick={_ => this.toggleMenu(!openMenu)}
+                  onClick={() => this.toggleMenu(!openMenu)}
                   type="id"
                   element="services"
                 >
@@ -86,7 +93,7 @@ export default class Header extends Component {
               </li>
               <li className="nav-item">
                 <Scroll
-                  onClick={_ => this.toggleMenu(!openMenu)}
+                  onClick={() => this.toggleMenu(!openMenu)}
                   type="id"
                   element="portfolio"
                 >
@@ -97,7 +104,7 @@ export default class Header extends Component {
               </li>
               <li className="nav-item">
                 <Scroll
-                  onClick={_ => this.toggleMenu(!openMenu)}
+                  onClick={() => this.toggleMenu(!openMenu)}
                   type="id"
                   element="contact"
                 >

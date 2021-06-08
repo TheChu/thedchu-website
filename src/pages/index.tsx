@@ -1,15 +1,14 @@
-import React from 'react';
-
+import React, { ReactElement } from 'react';
+import config from '../../config';
+import ContactUs from '../components/ContactUs';
+import Footer from '../components/Footer';
+import Gallery from '../components/Gallery';
+import Header from '../components/Header';
 import Layout from '../components/Layout';
 import Scroll from '../components/Scroll';
 
-import config from '../../config';
-import Footer from '../components/Footer';
-import Header from '../components/Header';
-import ContactUs from '../components/ContactUs';
-import Gallery from '../components/Gallery';
-
-const img_set = [
+/* eslint-disable global-require */ // This won't be user later anyways
+const imgSet = [
   {
     src: require('../assets/images/portfolio/fullsize/1.jpg'),
     thumbnail: require('../assets/images/portfolio/thumbnails/1.jpg'),
@@ -47,7 +46,9 @@ const img_set = [
     desc: 'Project Name',
   },
 ];
-const IndexPage = () => (
+/* eslint-enable global-require */
+
+const IndexPage = (): ReactElement => (
   <Layout>
     <Header />
 
@@ -78,7 +79,7 @@ const IndexPage = () => (
     </header>
 
     <section id="portfolio">
-      <Gallery images={img_set} />
+      <Gallery images={imgSet} />
     </section>
 
     <ContactUs />
