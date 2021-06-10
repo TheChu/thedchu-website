@@ -1,5 +1,9 @@
 const config = require('./config');
 
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   pathPrefix: config.pathPrefix,
   siteMetadata: {
@@ -19,6 +23,16 @@ module.exports = {
         icon: config.manifestIcon, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: 'gatsby-plugin-remote-images',
+      options: {
+        nodeType: 'MastheadImage',
+        imagePath: 'masthead',
+        name: 'localMasthead',
+      },
+    },
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     'gatsby-plugin-sass',
     'gatsby-plugin-offline',
     'gatsby-plugin-typescript',
