@@ -50,9 +50,14 @@ const imgSet = [
 ];
 /* eslint-enable global-require */
 
+// TODO: make separate component for hero image and corresponding unit tests
 const IndexPage = (): ReactElement => {
   const {
-    mastheadImage: { localMasthead: {childImageSharp: { fluid}} },
+    mastheadImage: {
+      localMasthead: {
+        childImageSharp: { fluid },
+      },
+    },
   } = useStaticQuery(graphql`
     query {
       mastheadImage {

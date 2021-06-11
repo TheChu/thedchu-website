@@ -1,0 +1,400 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IndexPage should match IndexPage snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="page-top"
+  >
+    <nav
+      class="navbar navbar-expand-lg navbar-light fixed-top py-3 "
+      id="mainNav"
+    >
+      <div
+        class="container"
+      >
+        <a
+          class="navbar-brand"
+          href="#page-top"
+        >
+          thedchu
+        </a>
+        <button
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          class="navbar-toggler navbar-toggler-right collapsed"
+          type="button"
+        >
+          <span
+            class="navbar-toggler-icon"
+          />
+        </button>
+        <div
+          class="collapse navbar-collapse "
+          id="navbarResponsive"
+        >
+          <ul
+            class="navbar-nav ml-auto my-2 my-lg-0"
+          >
+            <li
+              class="nav-item"
+            >
+              <a
+                class="nav-link"
+                href="#about"
+              >
+                About
+              </a>
+            </li>
+            <li
+              class="nav-item"
+            >
+              <a
+                class="nav-link"
+                href="#services"
+              >
+                Services
+              </a>
+            </li>
+            <li
+              class="nav-item"
+            >
+              <a
+                class="nav-link"
+                href="#portfolio"
+              >
+                Portfolio
+              </a>
+            </li>
+            <li
+              class="nav-item"
+            >
+              <a
+                class="nav-link"
+                href="#contact"
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <header
+      class="masthead gbi--1668593287-test-uuid"
+      style="background-position: center; background-repeat: no-repeat; background-size: cover; position: relative; opacity: 0.99;"
+    >
+      <style>
+        
+          .masthead.gbi--1668593287-test-uuid:before,
+          .masthead.gbi--1668593287-test-uuid:after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: #040e18;
+            transition: opacity 0.5s ease 250ms;
+            background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+
+          }
+          .masthead.gbi--1668593287-test-uuid:before {
+            z-index: -100;
+            background-image: url(test-base64);
+            
+            opacity: 1; 
+          }
+          .masthead.gbi--1668593287-test-uuid:after {
+            z-index: -101;
+            
+            background-image: url(test-base64);
+            
+          }
+        
+      </style>
+      <div
+        class="container h-100"
+      >
+        <div
+          class="row h-100 align-items-center justify-content-center text-center"
+        >
+          <div
+            class="col-lg-10 align-self-end"
+          >
+            <h1
+              class="text-uppercase text-white font-weight-bold"
+            >
+              David Chu
+            </h1>
+            <hr
+              class="divider my-4"
+            />
+          </div>
+          <div
+            class="col-lg-8 align-self-baseline"
+          >
+            <p
+              class="text-white-75 font-weight-light mb-5"
+            >
+              hello my name dchu I like to take nice photos, here are some
+            </p>
+            <a
+              class="btn btn-primary btn-xl js-scroll-trigger"
+              href="#portfolio"
+            >
+              Find Out More
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section
+      id="portfolio"
+    >
+      <div
+        class="container-fluid p-0"
+      >
+        <div
+          class="row no-gutters"
+        >
+          <div
+            class="col-lg-4 col-sm-6"
+          >
+            <a
+              class="portfolio-box"
+              href="test-file-stub"
+            >
+              <img
+                alt="Project Name"
+                class="img-fluid"
+                src="test-file-stub"
+                title="Category"
+              />
+              <div
+                class="portfolio-box-caption"
+              >
+                <div
+                  class="project-category text-white-50"
+                >
+                  Category
+                </div>
+                <div
+                  class="project-name"
+                >
+                  Project Name
+                </div>
+              </div>
+            </a>
+          </div>
+          <div
+            class="col-lg-4 col-sm-6"
+          >
+            <a
+              class="portfolio-box"
+              href="test-file-stub"
+            >
+              <img
+                alt="Project Name"
+                class="img-fluid"
+                src="test-file-stub"
+                title="Category"
+              />
+              <div
+                class="portfolio-box-caption"
+              >
+                <div
+                  class="project-category text-white-50"
+                >
+                  Category
+                </div>
+                <div
+                  class="project-name"
+                >
+                  Project Name
+                </div>
+              </div>
+            </a>
+          </div>
+          <div
+            class="col-lg-4 col-sm-6"
+          >
+            <a
+              class="portfolio-box"
+              href="test-file-stub"
+            >
+              <img
+                alt="Project Name"
+                class="img-fluid"
+                src="test-file-stub"
+                title="Category"
+              />
+              <div
+                class="portfolio-box-caption"
+              >
+                <div
+                  class="project-category text-white-50"
+                >
+                  Category
+                </div>
+                <div
+                  class="project-name"
+                >
+                  Project Name
+                </div>
+              </div>
+            </a>
+          </div>
+          <div
+            class="col-lg-4 col-sm-6"
+          >
+            <a
+              class="portfolio-box"
+              href="test-file-stub"
+            >
+              <img
+                alt="Project Name"
+                class="img-fluid"
+                src="test-file-stub"
+                title="Category"
+              />
+              <div
+                class="portfolio-box-caption"
+              >
+                <div
+                  class="project-category text-white-50"
+                >
+                  Category
+                </div>
+                <div
+                  class="project-name"
+                >
+                  Project Name
+                </div>
+              </div>
+            </a>
+          </div>
+          <div
+            class="col-lg-4 col-sm-6"
+          >
+            <a
+              class="portfolio-box"
+              href="test-file-stub"
+            >
+              <img
+                alt="Project Name"
+                class="img-fluid"
+                src="test-file-stub"
+                title="Category"
+              />
+              <div
+                class="portfolio-box-caption"
+              >
+                <div
+                  class="project-category text-white-50"
+                >
+                  Category
+                </div>
+                <div
+                  class="project-name"
+                >
+                  Project Name
+                </div>
+              </div>
+            </a>
+          </div>
+          <div
+            class="col-lg-4 col-sm-6"
+          >
+            <a
+              class="portfolio-box"
+              href="test-file-stub"
+            >
+              <img
+                alt="Project Name"
+                class="img-fluid"
+                src="test-file-stub"
+                title="Category"
+              />
+              <div
+                class="portfolio-box-caption"
+              >
+                <div
+                  class="project-category text-white-50"
+                >
+                  Category
+                </div>
+                <div
+                  class="project-name"
+                >
+                  Project Name
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer
+      class="bg-light py-5"
+    >
+      <div
+        class="container"
+      >
+        <div
+          class="row justify-content-center"
+        >
+          <div
+            class="col-lg-8 text-center mt-5 mb-lg-0"
+          >
+            <a
+              class="mx-2"
+              href="https://instagram.com/thedchu"
+            >
+              <i
+                aria-label="Instagram"
+                class="fab fa-3x mb-3 fa-instagram"
+              />
+            </a>
+            <a
+              class="mx-2"
+              href="https://linkedin.com/in/thedchu"
+            >
+              <i
+                aria-label="LinkedIn"
+                class="fab fa-3x mb-3 fa-linkedin-in"
+              />
+            </a>
+            <a
+              class="mx-2"
+              href="https://github.com/thechu"
+            >
+              <i
+                aria-label="Github"
+                class="fab fa-3x mb-3 fa-github"
+              />
+            </a>
+            <a
+              class="mx-2"
+              href="mailto:chu.david.a@gmail.com"
+            >
+              <i
+                aria-label="Email"
+                class="fas fa-3x mb-3 fa-envelope"
+              />
+            </a>
+          </div>
+        </div>
+        <div
+          class="small text-center text-muted"
+        >
+          Copyright © 2019 - Gatsby Starter Creative
+        </div>
+      </div>
+    </footer>
+  </div>
+</DocumentFragment>
+`;

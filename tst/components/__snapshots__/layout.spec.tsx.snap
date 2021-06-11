@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout should match Layout snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="page-top"
+  >
+    <div
+      class="test div"
+    />
+  </div>
+</DocumentFragment>
+`;
