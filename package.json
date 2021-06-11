@@ -33,16 +33,22 @@
     "serve": "gatsby serve",
     "clean": "rimraf .cache public",
     "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx}'",
+    "jest": "jest",
     "lint": "eslint . --ext ts --ext tsx",
-    "test": "npm run type-check && npm run lint",
+    "test": "npm run type-check && npm run lint && npm run jest",
     "type-check": "tsc --pretty --noEmit"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.13.0",
+    "@testing-library/react": "^11.2.7",
+    "@types/jest": "^26.0.23",
     "@types/node": "^15.12.1",
     "@types/react": "^17.0.9",
     "@types/react-dom": "^17.0.6",
     "@typescript-eslint/eslint-plugin": "^4.26.1",
     "@typescript-eslint/parser": "^4.26.1",
+    "babel-jest": "^27.0.2",
+    "babel-preset-gatsby": "^1.7.1",
     "eslint": "^7.28.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.3.0",
@@ -52,6 +58,8 @@
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "gh-pages": "^2.0.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.0.4",
     "prettier": "^1.17.0",
     "rimraf": "^3.0.2"
   }
