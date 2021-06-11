@@ -14,27 +14,27 @@ module.exports = {
   // social
   socialLinks: [
     {
-      style: 'b',
       icon: 'fa-instagram',
       name: 'Instagram',
+      style: 'b',
       url: 'https://instagram.com/thedchu',
     },
     {
-      style: 'b',
       icon: 'fa-linkedin-in',
-      name: 'Linkedin',
-      url: 'https://linkedin.com/in/thedchu/',
+      name: 'LinkedIn',
+      style: 'b',
+      url: 'https://linkedin.com/in/thedchu',
     },
     {
-      style: 'b',
       icon: 'fa-github',
       name: 'Github',
+      style: 'b',
       url: 'https://github.com/thechu',
     },
     {
-      style: 's',
       icon: 'fa-envelope',
       name: 'Email',
+      style: 's',
       url: 'mailto:chu.david.a@gmail.com',
     },
   ],

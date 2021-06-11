@@ -8,7 +8,7 @@ interface HeaderState {
 }
 
 export default class Header extends Component<{}, HeaderState> {
-  constructor(props = {}) {
+  constructor(props: {}) {
     super(props);
     this.state = {
       openMenu: false,

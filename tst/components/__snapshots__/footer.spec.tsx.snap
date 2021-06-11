@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer should match Footer snapshot 1`] = `
+<DocumentFragment>
+  <footer
+    class="bg-light py-5"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="row justify-content-center"
+      >
+        <div
+          class="col-lg-8 text-center mt-5 mb-lg-0"
+        >
+          <a
+            class="mx-2"
+            href="https://instagram.com/thedchu"
+          >
+            <i
+              aria-label="Instagram"
+              class="fab fa-3x mb-3 fa-instagram"
+            />
+          </a>
+          <a
+            class="mx-2"
+            href="https://linkedin.com/in/thedchu"
+          >
+            <i
+              aria-label="LinkedIn"
+              class="fab fa-3x mb-3 fa-linkedin-in"
+            />
+          </a>
+          <a
+            class="mx-2"
+            href="https://github.com/thechu"
+          >
+            <i
+              aria-label="Github"
+              class="fab fa-3x mb-3 fa-github"
+            />
+          </a>
+          <a
+            class="mx-2"
+            href="mailto:chu.david.a@gmail.com"
+          >
+            <i
+              aria-label="Email"
+              class="fas fa-3x mb-3 fa-envelope"
+            />
+          </a>
+        </div>
+      </div>
+      <div
+        class="small text-center text-muted"
+      >
+        Copyright © 2019 - Gatsby Starter Creative
+      </div>
+    </div>
+  </footer>
+</DocumentFragment>
+`;

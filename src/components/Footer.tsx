@@ -7,10 +7,13 @@ const Footer: FC = (): ReactElement => (
       <div className="row justify-content-center">
         <div className="col-lg-8 text-center mt-5 mb-lg-0">
           {config.socialLinks.map((social) => {
-            const { style, icon, url } = social;
+            const { icon, name, style, url } = social;
             return (
               <a key={url} href={url} className="mx-2">
-                <i className={`fa${style} fa-3x mb-3 ${icon}`} />
+                <i
+                  className={`fa${style} fa-3x mb-3 ${icon}`}
+                  aria-label={name}
+                />
               </a>
             );
           })}

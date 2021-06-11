@@ -9,6 +9,7 @@ module.exports = {
       '<rootDir>/__mocks__/file-mock.js',
   },
   testPathIgnorePatterns: ['node_modules', '\\.cache', '<rootDir>.*/public'],
+  testEnvironment: 'jsdom',
   transformIgnorePatterns: ['node_modules/(?!(gatsby)/)'],
   globals: {
     __PATH_PREFIX__: '',
