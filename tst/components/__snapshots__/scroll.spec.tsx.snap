@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Scroll no props should match Scroll snapshot 1`] = `
+<DocumentFragment>
+  <button
+    aria-label="Test button"
+    type="button"
+  />
+</DocumentFragment>
+`;
