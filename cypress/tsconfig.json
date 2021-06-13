@@ -1,9 +1,5 @@
 {
   "compilerOptions": {
-    "allowJs": true,
-    "allowSyntheticDefaultImports": true,
-    "baseUrl": "./src",
-    "jsx": "react",
     "lib": ["dom", "dom.Iterable", "esnext", "es2015", "es2016", "es2017"],
     "moduleResolution": "node",
     "noImplicitAny": false,
@@ -14,8 +10,8 @@
         "name": "typescript-styled-plugin"
       }
     ],
-    "target": "es2015"
+    "target": "es2015",
+    "types": ["node", "cypress", "@testing-library/cypress"]
   },
-  "include": ["**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules/*", "public/*", "cypress/*"]
+  "include": ["./**/*.ts"]
 }

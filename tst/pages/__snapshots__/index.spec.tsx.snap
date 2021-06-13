@@ -153,6 +153,7 @@ background-size: cover;
       </div>
     </header>
     <section
+      aria-label="portfolio"
       id="portfolio"
     >
       <div

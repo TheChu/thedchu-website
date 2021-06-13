@@ -107,7 +107,7 @@ const IndexPage = (): ReactElement => {
         </div>
       </BackgroundImage>
 
-      <section id="portfolio">
+      <section id="portfolio" aria-label="portfolio">
         <Gallery images={imgSet} />
       </section>
 

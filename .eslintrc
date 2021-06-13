@@ -31,7 +31,7 @@
     ],
     "import/no-extraneous-dependencies": [
       "error",
-      { "devDependencies": ["**/*.spec.{js,jsx,ts,tsx}"] }
+      { "devDependencies": ["**/*.spec.{js,jsx,ts,tsx}", "cypress/**"] }
     ],
 
     "no-use-before-define": "off",

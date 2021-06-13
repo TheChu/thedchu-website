@@ -18,9 +18,9 @@
     "gatsby-plugin-typescript": "^2.12.1",
     "gatsby-transformer-sharp": "^2.12.1",
     "node-sass": "^4.13.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-helmet": "^5.2.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-helmet": "^6.1.0",
     "react-images": "^0.5.19",
     "react-scrollspy": "^3.4.2",
     "smoothscroll-polyfill": "^0.4.4",
@@ -28,17 +28,23 @@
   },
   "scripts": {
     "develop": "gatsby develop",
-    "build": "npm run clean && gatsby build",
-    "deploy": "npm run clean && gatsby build --prefix-paths && gh-pages -d public",
+    "build": "gatsby build",
+    "build-test": "npm run clean && gatsby build && npm run test && npm run cypress:test",
     "serve": "gatsby serve",
     "clean": "rimraf .cache public",
-    "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx}'",
+    "format": "prettier --write '**/*.{js,jsx,ts,tsx}'",
     "jest": "jest",
     "lint": "eslint . --ext ts --ext tsx",
     "test": "npm run type-check && npm run lint && npm run jest",
-    "type-check": "tsc --pretty --noEmit"
+    "type-check": "tsc --pretty --noEmit",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "cypress:run:production": "cypress run --env stage=production",
+    "cypress:test": "npm run cypress:type-check && start-test serve 9000 cypress:run:production",
+    "cypress:type-check": "tsc --pretty --noEmit --project cypress/tsconfig.json"
   },
   "devDependencies": {
+    "@testing-library/cypress": "^7.0.6",
     "@testing-library/jest-dom": "^5.13.0",
     "@testing-library/react": "^11.2.7",
     "@types/jest": "^26.0.23",
@@ -49,6 +55,7 @@
     "@typescript-eslint/parser": "^4.26.1",
     "babel-jest": "^27.0.2",
     "babel-preset-gatsby": "^1.7.1",
+    "cypress": "^7.5.0",
     "eslint": "^7.28.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.3.0",
@@ -57,11 +64,13 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "fs-extra": "^10.0.0",
     "gh-pages": "^2.0.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.0.4",
     "prettier": "^1.17.0",
     "rimraf": "^3.0.2",
-    "short-uuid": "^4.2.0"
+    "short-uuid": "^4.2.0",
+    "start-server-and-test": "^1.12.5"
   }
 }
