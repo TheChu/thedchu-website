@@ -38,7 +38,7 @@ describe('Header', () => {
     const { getByRole } = render(<Header />);
     expect(getByRole('link', { name: 'thedchu' })).toHaveAttribute(
       'href',
-      '#page-top'
+      '/'
     );
   });
 

@@ -28,13 +28,13 @@ const Layout: FC<LayoutProps> = (props: LayoutProps): ReactElement => {
       <Helmet
         title={title}
         meta={[
-          { name: 'description', content: 'Creative' },
+          { name: 'description', content: 'thedchu personal website' },
           { name: 'keywords', content: 'site, web' },
         ]}
       >
         <html lang="en" />
       </Helmet>
-      <div className="page-top">{children}</div>
+      <>{children}</>
     </>
   );
 };

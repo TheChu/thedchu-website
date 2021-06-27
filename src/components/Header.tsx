@@ -1,3 +1,4 @@
+import { Link } from 'gatsby';
 import React, { Component, ReactElement } from 'react';
 import config from '../../config';
 import Scroll from './Scroll';
@@ -47,9 +48,9 @@ export default class Header extends Component<{}, HeaderState> {
         id="mainNav"
       >
         <div className="container">
-          <a className="navbar-brand" href="#page-top">
+          <Link to="/" className="navbar-brand">
             {config.siteTitle}
-          </a>
+          </Link>
 
           <button
             onClick={() => this.toggleMenu(!openMenu)}

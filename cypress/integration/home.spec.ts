@@ -1,4 +1,16 @@
 describe('Home', () => {
+  it('should scroll to top when clicking site title on navigation bar', () => {
+    cy.visit('/');
+    cy.scrollTo('bottom')
+      .window()
+      .its('scrollY')
+      .should('not.equal', 0);
+    cy.findByRole('link', { name: 'thedchu' }).click();
+    cy.window()
+      .its('scrollY')
+      .should('equal', 0);
+  });
+
   it('should scroll down to portfolio when clicking `Find out more` button', () => {
     cy.visit('/');
 

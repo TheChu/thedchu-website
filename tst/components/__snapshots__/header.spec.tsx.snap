@@ -11,7 +11,7 @@ exports[`Header should match Header snapshot 1`] = `
     >
       <a
         class="navbar-brand"
-        href="#page-top"
+        href="/"
       >
         thedchu
       </a>

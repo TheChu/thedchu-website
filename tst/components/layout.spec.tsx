@@ -29,7 +29,7 @@ describe('Layout', () => {
     expect(metaTags.length).toBe(2);
     expect(metaTags).toEqual(
       expect.arrayContaining([
-        { name: 'description', content: 'Creative' },
+        { name: 'description', content: 'thedchu personal website' },
         { name: 'keywords', content: 'site, web' },
       ])
     );
