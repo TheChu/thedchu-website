@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Masthead should match Masthead snapshot 1`] = `
+<DocumentFragment>
+  <header
+    class="masthead gbi--1668593287-test-uuid"
+    style="background-position: center; background-repeat: no-repeat; background-size: cover; position: relative; opacity: 0.99;"
+  >
+    <style>
+      
+          .masthead.gbi--1668593287-test-uuid:before,
+          .masthead.gbi--1668593287-test-uuid:after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: #040e18;
+            transition: opacity 0.5s ease 250ms;
+            background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+
+          }
+          .masthead.gbi--1668593287-test-uuid:before {
+            z-index: -100;
+            background-image: url(test-base64);
+            
+            opacity: 1; 
+          }
+          .masthead.gbi--1668593287-test-uuid:after {
+            z-index: -101;
+            
+            background-image: url(test-base64);
+            
+          }
+        
+    </style>
+    <div
+      class="test div"
+    />
+  </header>
+</DocumentFragment>
+`;

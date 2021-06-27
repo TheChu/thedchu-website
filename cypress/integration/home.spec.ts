@@ -1,6 +1,6 @@
 describe('Home', () => {
   it('should scroll to top when clicking site title on navigation bar', () => {
-    cy.visit('/');
+    cy.visit('/').wait(500);
     cy.scrollTo('bottom')
       .window()
       .its('scrollY')
@@ -12,7 +12,7 @@ describe('Home', () => {
   });
 
   it('should scroll down to portfolio when clicking `Find out more` button', () => {
-    cy.visit('/');
+    cy.visit('/').wait(500);
 
     // The window should scroll to the portfolio section's top position unless
     // that position is below the maximun scroll position (i.e. when you scroll

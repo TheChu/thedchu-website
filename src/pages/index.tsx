@@ -1,11 +1,10 @@
-import { graphql, useStaticQuery } from 'gatsby';
-import BackgroundImage from 'gatsby-background-image';
 import React, { ReactElement } from 'react';
 import config from '../../config';
 import Footer from '../components/Footer';
 import Gallery from '../components/Gallery';
 import Header from '../components/Header';
 import Layout from '../components/Layout';
+import Masthead from '../components/Masthead';
 import Scroll from '../components/Scroll';
 
 /* eslint-disable global-require */
@@ -50,70 +49,42 @@ const imgSet = [
 ];
 /* eslint-enable global-require */
 
-// TODO: make separate component for hero image and corresponding unit tests
-const IndexPage = (): ReactElement => {
-  const {
-    mastheadImage: {
-      localMasthead: {
-        childImageSharp: { fluid },
-      },
-    },
-  } = useStaticQuery(graphql`
-    query {
-      mastheadImage {
-        localMasthead {
-          childImageSharp {
-            fluid(quality: 90, maxWidth: 1920) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-    }
-  `);
+const IndexPage = (): ReactElement => (
+  <Layout>
+    <Header />
 
-  return (
-    <Layout>
-      <Header />
-
-      <BackgroundImage
-        Tag="header"
-        className="masthead"
-        fluid={fluid}
-        backgroundColor="#040e18"
-      >
-        <div className="container h-100">
-          <div className="row h-100 align-items-center justify-content-center text-center">
-            <div className="col-lg-10 align-self-end">
-              <h1 className="text-uppercase text-white font-weight-bold">
-                {config.heading}
-              </h1>
-              <hr className="divider my-4" />
-            </div>
-            <div className="col-lg-8 align-self-baseline">
-              <p className="text-white-75 font-weight-light mb-5">
-                {config.subHeading}
-              </p>
-              <Scroll type="id" element="portfolio">
-                <a
-                  className="btn btn-primary btn-xl js-scroll-trigger"
-                  href="#portfolio"
-                >
-                  Find Out More
-                </a>
-              </Scroll>
-            </div>
+    <Masthead>
+      <div className="container h-100">
+        <div className="row h-100 align-items-center justify-content-center text-center">
+          <div className="col-lg-10 align-self-end">
+            <h1 className="text-uppercase text-white font-weight-bold">
+              {config.heading}
+            </h1>
+            <hr className="divider my-4" />
+          </div>
+          <div className="col-lg-8 align-self-baseline">
+            <p className="text-white-75 font-weight-light mb-5">
+              {config.subHeading}
+            </p>
+            <Scroll type="id" element="portfolio">
+              <a
+                className="btn btn-primary btn-xl js-scroll-trigger"
+                href="#portfolio"
+              >
+                Find Out More
+              </a>
+            </Scroll>
           </div>
         </div>
-      </BackgroundImage>
+      </div>
+    </Masthead>
 
-      <section id="portfolio" aria-label="portfolio">
-        <Gallery images={imgSet} />
-      </section>
+    <section id="portfolio" aria-label="portfolio">
+      <Gallery images={imgSet} />
+    </section>
 
-      <Footer />
-    </Layout>
-  );
-};
+    <Footer />
+  </Layout>
+);
 
 export default IndexPage;

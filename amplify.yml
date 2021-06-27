@@ -22,6 +22,7 @@ test:
         - npm install mocha mochawesome mochawesome-merge mochawesome-report-generator
     test:
       commands:
+        - npm run cypress:build
         - npm run cypress:type-check
         - npx start-test serve 9000 'cypress run --env stage=production --reporter mochawesome --reporter-options "reportDir=cypress/report/mochawesome-report,overwrite=false,html=false,json=true,timestamp=mmddyyyy_HHMMss"'
     postTest:

@@ -2,7 +2,7 @@ import { render } from '@testing-library/react';
 import { useStaticQuery } from 'gatsby';
 import React from 'react';
 import uuid from 'short-uuid';
-import IndexPage from '../../src/pages/404';
+import Masthead from '../../src/components/Masthead';
 
 jest.mock('short-uuid');
 (uuid.generate as jest.Mock).mockReturnValue('test-uuid');
@@ -23,21 +23,15 @@ jest.mock('short-uuid');
       },
     },
   },
-  site: { siteMetadata: { title: 'thedchu' } },
 });
-describe('404 IndexPage', () => {
-  it('should match 404 IndexPage snapshot', () => {
-    const { asFragment } = render(<IndexPage />);
+
+describe('Masthead', () => {
+  it('should match Masthead snapshot', () => {
+    const { asFragment } = render(
+      <Masthead>
+        <div className="test div" />
+      </Masthead>
+    );
     expect(asFragment()).toMatchSnapshot();
-  });
-
-  it('should render navigation bar', () => {
-    const { getByRole } = render(<IndexPage />);
-    expect(getByRole('navigation')).toBeVisible();
-  });
-
-  it('should render a link to home page', () => {
-    const { getByRole } = render(<IndexPage />);
-    expect(getByRole('link', { name: 'Go Home' })).toBeVisible();
   });
 });

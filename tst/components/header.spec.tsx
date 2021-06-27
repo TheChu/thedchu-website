@@ -36,10 +36,7 @@ describe('Header', () => {
 
   it('should render site title', () => {
     const { getByRole } = render(<Header />);
-    expect(getByRole('link', { name: 'thedchu' })).toHaveAttribute(
-      'href',
-      '/'
-    );
+    expect(getByRole('link', { name: 'thedchu' })).toHaveAttribute('href', '/');
   });
 
   it('should change navigation bar when scrolling past threshold', () => {

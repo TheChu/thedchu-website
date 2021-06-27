@@ -2,11 +2,12 @@ import { Link } from 'gatsby';
 import React, { ReactElement } from 'react';
 import Header from '../components/Header';
 import Layout from '../components/Layout';
+import Masthead from '../components/Masthead';
 
 const IndexPage = (): ReactElement => (
   <Layout>
     <Header />
-    <header className="masthead">
+    <Masthead>
       <div className="container h-100">
         <div className="row h-100 align-items-center justify-content-center text-center">
           <div className="col-lg-10 align-self-end">
@@ -25,7 +26,7 @@ const IndexPage = (): ReactElement => (
           </div>
         </div>
       </div>
-    </header>
+    </Masthead>
   </Layout>
 );
 
