@@ -1,6 +1,5 @@
 import { Link } from 'gatsby';
 import React, { Component, ReactElement } from 'react';
-import config from '../../config';
 import Scroll from './Scroll';
 
 interface HeaderState {
@@ -49,7 +48,7 @@ export default class Header extends Component<{}, HeaderState> {
       >
         <div className="container">
           <Link to="/" className="navbar-brand">
-            {config.siteTitle}
+            thedchu
           </Link>
 
           <button

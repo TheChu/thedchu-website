@@ -1,26 +1,24 @@
-const config = require('./config');
-
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
 module.exports = {
-  pathPrefix: config.pathPrefix,
   siteMetadata: {
-    title: config.siteTitle,
+    title: 'thedchu',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: config.manifestName,
-        short_name: config.manifestShortName,
-        start_url: config.pathPrefix || config.manifestStartUrl,
-        background_color: config.manifestBackgroundColor,
-        theme_color: config.manifestThemeColor,
-        display: config.manifestDisplay,
-        icon: config.manifestIcon, // This path is relative to the root of the site.
+        name: 'thedchu',
+        short_name: 'thedchu',
+        description: `thedchu's personal website`,
+        start_url: '/',
+        background_color: '#663399',
+        theme_color: '#663399',
+        display: 'standalone',
+        icon: 'src/assets/img/thedchu-logo.svg',
       },
     },
     {
