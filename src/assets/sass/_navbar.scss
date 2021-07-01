@@ -7,6 +7,10 @@
     font-family: $font-family-sans-serif;
     font-weight: $font-weight-bold;
     color: $gray-900;
+    fill: $gray-900;
+  }
+  .navbar-brand-logo {
+    height: 27px;
   }
   .navbar-nav {
     .nav-item {
@@ -31,15 +35,17 @@
     box-shadow: none;
     background-color: transparent;
     .navbar-brand {
-      color: fade-out($white, .3);
+      color: fade-out($white, 0.3);
+      fill: fade-out($white, 0.3);
       &:hover {
         color: $white;
+        fill: $white;
       }
     }
     .navbar-nav {
       .nav-item {
         .nav-link {
-          color: fade-out($white, .3);
+          color: fade-out($white, 0.3);
           padding: 0 1rem;
           &:hover {
             color: $white;
@@ -58,8 +64,10 @@
       background-color: $white;
       .navbar-brand {
         color: $gray-900;
+        fill: $gray-900;
         &:hover {
           color: $primary;
+          fill: $primary;
         }
       }
       .navbar-nav {

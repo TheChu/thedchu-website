@@ -1,11 +1,11 @@
 describe('Home', () => {
-  it('should scroll to top when clicking site title on navigation bar', () => {
+  it('should scroll to top when clicking logo on navigation bar', () => {
     cy.visit('/').wait(500);
     cy.scrollTo('bottom')
       .window()
       .its('scrollY')
       .should('not.equal', 0);
-    cy.findByRole('link', { name: 'thedchu' }).click();
+    cy.findByRole('link', { name: 'DChu' }).click();
     cy.window()
       .its('scrollY')
       .should('equal', 0);

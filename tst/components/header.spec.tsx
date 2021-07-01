@@ -34,9 +34,9 @@ describe('Header', () => {
     );
   });
 
-  it('should render site title', () => {
+  it('should render logo', () => {
     const { getByRole } = render(<Header />);
-    expect(getByRole('link', { name: 'thedchu' })).toHaveAttribute('href', '/');
+    expect(getByRole('link', { name: 'DChu' })).toHaveAttribute('href', '/');
   });
 
   it('should change navigation bar when scrolling past threshold', () => {

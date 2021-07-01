@@ -1,6 +1,7 @@
 import { Link } from 'gatsby';
 import React, { Component, ReactElement } from 'react';
 import Scroll from './Scroll';
+import logo from '../assets/img/thedchu-logo.svg';
 
 interface HeaderState {
   openMenu: boolean;
@@ -48,7 +49,13 @@ export default class Header extends Component<{}, HeaderState> {
       >
         <div className="container">
           <Link to="/" className="navbar-brand">
-            thedchu
+            <svg
+              className="navbar-brand-logo"
+              viewBox="0 0 1000 512"
+              aria-label="DChu"
+            >
+              <use href={`${logo}#thedchu-logo`} />
+            </svg>
           </Link>
 
           <button

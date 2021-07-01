@@ -4,7 +4,7 @@ describe('Navigation', () => {
   context('desktop', () => {
     it('should display navigation links', () => {
       cy.visit('/');
-      cy.findByRole('link', { name: 'thedchu' }).should('be.visible');
+      cy.findByRole('link', { name: 'DChu' }).should('be.visible');
       cy.findByRole('button', { name: 'Toggle navigation' }).should(
         'not.exist'
       );
@@ -33,7 +33,7 @@ describe('Navigation', () => {
 
     it('should display and hide navigation menu when clicking `Toggle navigation` button', () => {
       cy.visit('/');
-      cy.findByRole('link', { name: 'thedchu' }).should('be.visible');
+      cy.findByRole('link', { name: 'DChu' }).should('be.visible');
       cy.findByRole('button', { name: 'Toggle navigation' }).should(
         'be.visible'
       );

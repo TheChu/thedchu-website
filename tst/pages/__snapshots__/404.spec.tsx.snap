@@ -13,7 +13,15 @@ exports[`404 IndexPage should match 404 IndexPage snapshot 1`] = `
         class="navbar-brand"
         href="/"
       >
-        thedchu
+        <svg
+          aria-label="DChu"
+          class="navbar-brand-logo"
+          viewBox="0 0 1000 512"
+        >
+          <use
+            href="test-file-stub#thedchu-logo"
+          />
+        </svg>
       </a>
       <button
         aria-controls="navbarResponsive"
