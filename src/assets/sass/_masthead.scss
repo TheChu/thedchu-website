@@ -1,3 +1,4 @@
+
 // Styling for the masthead
 header.masthead {
   padding-top: 10rem;
@@ -26,4 +27,13 @@ header.masthead {
       font-size: 3.5rem;
     }
   }
+
+  .masthead-title {
+    fill: $white;
+    width: 300px;
+  }
+}
+
+header.masthead::after {
+  background-attachment: fixed;
 }

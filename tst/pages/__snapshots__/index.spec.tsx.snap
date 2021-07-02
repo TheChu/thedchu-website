@@ -133,7 +133,15 @@ background-size: cover;
           <h1
             class="text-uppercase text-white font-weight-bold"
           >
-            David Chu
+            <svg
+              aria-label="DChu"
+              class="masthead-title"
+              viewBox="0 0 1000 512"
+            >
+              <use
+                href="test-file-stub#thedchu-logo"
+              />
+            </svg>
           </h1>
           <hr
             class="divider my-4"
@@ -143,7 +151,7 @@ background-size: cover;
           class="col-lg-8 align-self-baseline"
         >
           <p
-            class="text-white-75 font-weight-light mb-5"
+            class="text-light font-weight-light mb-5"
           >
             hello my name dchu I like to take nice photos, here are some
           </p>

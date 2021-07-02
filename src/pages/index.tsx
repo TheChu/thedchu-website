@@ -5,6 +5,7 @@ import Header from '../components/Header';
 import Layout from '../components/Layout';
 import Masthead from '../components/Masthead';
 import Scroll from '../components/Scroll';
+import logo from '../assets/img/thedchu-logo.svg';
 
 /* eslint-disable global-require */
 // This won't be user later anyways
@@ -57,12 +58,18 @@ const IndexPage = (): ReactElement => (
         <div className="row h-100 align-items-center justify-content-center text-center">
           <div className="col-lg-10 align-self-end">
             <h1 className="text-uppercase text-white font-weight-bold">
-              David Chu
+              <svg
+                className="masthead-title"
+                viewBox="0 0 1000 512"
+                aria-label="DChu"
+              >
+                <use href={`${logo}#thedchu-logo`} />
+              </svg>
             </h1>
             <hr className="divider my-4" />
           </div>
           <div className="col-lg-8 align-self-baseline">
-            <p className="text-white-75 font-weight-light mb-5">
+            <p className="text-light font-weight-light mb-5">
               hello my name dchu I like to take nice photos, here are some
             </p>
             <Scroll type="id" element="portfolio">
