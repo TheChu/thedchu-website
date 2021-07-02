@@ -16,14 +16,12 @@ describe('Header', () => {
 
   it('should render the correct number of links', () => {
     const { getAllByRole } = render(<Header />);
-    expect(getAllByRole('link').length).toBe(5);
+    expect(getAllByRole('link').length).toBe(7);
   });
 
   const navigationLinks = [
     { text: 'About', location: '#about' },
-    { text: 'Services', location: '#services' },
-    { text: 'Portfolio', location: '#portfolio' },
-    { text: 'Contact', location: '#contact' },
+    { text: 'Photos', location: '#photos' },
   ];
 
   it.each(navigationLinks)('should render %s link', (link) => {
@@ -31,6 +29,21 @@ describe('Header', () => {
     expect(getByRole('link', { name: link.text })).toHaveAttribute(
       'href',
       link.location
+    );
+  });
+
+  const socialLinks = [
+    { name: 'Instagram', url: 'https://instagram.com/thedchu' },
+    { name: 'LinkedIn', url: 'https://linkedin.com/in/thedchu' },
+    { name: 'Github', url: 'https://github.com/thechu' },
+    { name: 'Email', url: 'mailto:chu.david.a@gmail.com' },
+  ];
+
+  it.each(socialLinks)('should render %s link', (link) => {
+    const { getByRole } = render(<Header />);
+    expect(getByRole('link', { name: link.name })).toHaveAttribute(
+      'href',
+      link.url
     );
   });
 

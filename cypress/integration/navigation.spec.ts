@@ -1,16 +1,47 @@
 describe('Navigation', () => {
-  const navLinkNames = ['About', 'Services', 'Portfolio', 'Contact'];
+  // TODO: test navigation between pages once `About` page is made/being made
+  const navLinkNames = ['About', 'Photos'];
+  const socialLinks = [
+    { name: 'Instagram', url: 'https://instagram.com/thedchu' },
+    { name: 'LinkedIn', url: 'https://linkedin.com/in/thedchu' },
+    { name: 'Github', url: 'https://github.com/thechu' },
+    { name: 'Email', url: 'mailto:chu.david.a@gmail.com' },
+  ];
 
   context('desktop', () => {
     it('should display navigation links', () => {
       cy.visit('/');
-      cy.findByRole('link', { name: 'DChu' }).should('be.visible');
-      cy.findByRole('button', { name: 'Toggle navigation' }).should(
-        'not.exist'
-      );
+      cy.get('nav')
+        .findByRole('link', { name: 'DChu' })
+        .should('not.exist');
+      cy.get('nav')
+        .findByRole('button', { name: 'Toggle navigation' })
+        .should('not.exist');
       navLinkNames.forEach((name) => {
-        cy.findByRole('link', { name }).should('be.visible');
+        cy.get('nav')
+          .findByRole('link', { name })
+          .should('be.visible');
       });
+      socialLinks.forEach(({ name, url }) => {
+        cy.get('nav')
+          .findByRole('link', { name })
+          .should('be.visible')
+          .then((link) => (<HTMLAnchorElement>link[0]).href)
+          .then((href) => {
+            expect(href).to.eq(url);
+          });
+      });
+    });
+
+    it('should display logo only after scrolling down', () => {
+      cy.visit('/');
+      cy.get('nav')
+        .findByRole('link', { name: 'DChu' })
+        .should('not.exist');
+      cy.scrollTo(0, 400);
+      cy.get('nav')
+        .findByRole('link', { name: 'DChu' })
+        .should('be.visible');
     });
   });
 
@@ -21,28 +52,38 @@ describe('Navigation', () => {
 
     const assertNavMenuVisible = () => {
       navLinkNames.forEach((name) => {
-        cy.findByRole('link', { name }).should('be.visible');
+        cy.get('nav')
+          .findByRole('link', { name })
+          .should('be.visible');
       });
     };
 
     const assertNavMenuHidden = () => {
       navLinkNames.forEach((name) => {
-        cy.findByRole('link', { name }).should('not.exist');
+        cy.get('nav')
+          .findByRole('link', { name })
+          .should('not.exist');
       });
     };
 
     it('should display and hide navigation menu when clicking `Toggle navigation` button', () => {
       cy.visit('/');
-      cy.findByRole('link', { name: 'DChu' }).should('be.visible');
-      cy.findByRole('button', { name: 'Toggle navigation' }).should(
-        'be.visible'
-      );
+      cy.get('nav')
+        .findByRole('link', { name: 'DChu' })
+        .should('be.visible');
+      cy.get('nav')
+        .findByRole('button', { name: 'Toggle navigation' })
+        .should('be.visible');
       assertNavMenuHidden();
 
-      cy.findByRole('button', { name: 'Toggle navigation' }).click();
+      cy.get('nav')
+        .findByRole('button', { name: 'Toggle navigation' })
+        .click();
       assertNavMenuVisible();
 
-      cy.findByRole('button', { name: 'Toggle navigation' }).click();
+      cy.get('nav')
+        .findByRole('button', { name: 'Toggle navigation' })
+        .click();
       assertNavMenuHidden();
     });
 
@@ -51,10 +92,14 @@ describe('Navigation', () => {
         cy.visit('/');
         assertNavMenuHidden();
 
-        cy.findByRole('button', { name: 'Toggle navigation' }).click();
+        cy.get('nav')
+          .findByRole('button', { name: 'Toggle navigation' })
+          .click();
         assertNavMenuVisible();
 
-        cy.findByRole('link', { name }).click();
+        cy.get('nav')
+          .findByRole('link', { name })
+          .click();
         assertNavMenuHidden();
       });
     });

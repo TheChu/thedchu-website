@@ -9,8 +9,68 @@ exports[`404 IndexPage should match 404 IndexPage snapshot 1`] = `
     <div
       class="container"
     >
+      <div
+        class="navbar-item"
+      >
+        <ul
+          class="navbar-nav mr-auto my-2 my-lg-0"
+        >
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link nav-link-icon mx-2"
+              href="https://instagram.com/thedchu"
+            >
+              <i
+                aria-label="Instagram"
+                class="fab fa-instagram"
+              />
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link nav-link-icon mx-2"
+              href="https://linkedin.com/in/thedchu"
+            >
+              <i
+                aria-label="LinkedIn"
+                class="fab fa-linkedin-in"
+              />
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link nav-link-icon mx-2"
+              href="https://github.com/thechu"
+            >
+              <i
+                aria-label="Github"
+                class="fab fa-github"
+              />
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link nav-link-icon mx-2"
+              href="mailto:chu.david.a@gmail.com"
+            >
+              <i
+                aria-label="Email"
+                class="fas fa-envelope"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
       <a
-        class="navbar-brand"
+        class="navbar-brand navbar-item"
         href="/"
       >
         <svg
@@ -23,17 +83,21 @@ exports[`404 IndexPage should match 404 IndexPage snapshot 1`] = `
           />
         </svg>
       </a>
-      <button
-        aria-controls="navbarResponsive"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-        class="navbar-toggler navbar-toggler-right collapsed"
-        type="button"
+      <div
+        class="navbar-toggler-container"
       >
-        <span
-          class="navbar-toggler-icon"
-        />
-      </button>
+        <button
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          class="navbar-toggler navbar-toggler-right collapsed"
+          type="button"
+        >
+          <span
+            class="navbar-toggler-icon"
+          />
+        </button>
+      </div>
       <div
         class="collapse navbar-collapse "
         id="navbarResponsive"
@@ -56,29 +120,9 @@ exports[`404 IndexPage should match 404 IndexPage snapshot 1`] = `
           >
             <a
               class="nav-link"
-              href="#services"
+              href="#photos"
             >
-              Services
-            </a>
-          </li>
-          <li
-            class="nav-item"
-          >
-            <a
-              class="nav-link"
-              href="#portfolio"
-            >
-              Portfolio
-            </a>
-          </li>
-          <li
-            class="nav-item"
-          >
-            <a
-              class="nav-link"
-              href="#contact"
-            >
-              Contact
+              Photos
             </a>
           </li>
         </ul>

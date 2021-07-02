@@ -72,10 +72,10 @@ const IndexPage = (): ReactElement => (
             <p className="text-light font-weight-light mb-5">
               hello my name dchu I like to take nice photos, here are some
             </p>
-            <Scroll type="id" element="portfolio">
+            <Scroll type="id" element="photos">
               <a
                 className="btn btn-primary btn-xl js-scroll-trigger"
-                href="#portfolio"
+                href="#photos"
               >
                 Find Out More
               </a>
@@ -85,7 +85,7 @@ const IndexPage = (): ReactElement => (
       </div>
     </Masthead>
 
-    <section id="portfolio" aria-label="portfolio">
+    <section id="photos" aria-label="photos">
       <Gallery images={imgSet} />
     </section>
 

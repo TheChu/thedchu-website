@@ -31,6 +31,7 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    min-height:40px;
   }
 }
 
@@ -43,7 +44,6 @@
   display: inline-block;
   padding-top: $navbar-brand-padding-y;
   padding-bottom: $navbar-brand-padding-y;
-  margin-right: $navbar-padding-x;
   @include font-size($navbar-brand-font-size);
   line-height: inherit;
   white-space: nowrap;
@@ -51,6 +51,16 @@
   @include hover-focus {
     text-decoration: none;
   }
+}
+
+.navbar-brand-logo {
+  height: 27px;
+}
+
+.navbar-item {
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
 
@@ -104,8 +114,14 @@
   align-items: center;
 }
 
+.navbar-toggler-container {
+  flex: 1;
+}
+
 // Button for toggling the navbar when in its collapsed state
 .navbar-toggler {
+  display: flex;
+  margin-left: auto;
   padding: $navbar-toggler-padding-y $navbar-toggler-padding-x;
   @include font-size($navbar-toggler-font-size);
   line-height: 1;
@@ -174,6 +190,12 @@
 
           // Changes flex-bases to auto because of an IE10 bug
           flex-basis: auto;
+
+          flex: 1;
+        }
+
+        .navbar-toggler-container {
+          flex: none;
         }
 
         .navbar-toggler {
