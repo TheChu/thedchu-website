@@ -1,5 +1,7 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
+import { getImage } from 'gatsby-plugin-image';
+import { convertToBgImage } from 'gbimage-bridge';
 import React, { FC, ReactElement, ReactNode } from 'react';
 
 interface MastheadProps {
@@ -11,7 +13,7 @@ const Masthead: FC<MastheadProps> = (props: MastheadProps): ReactElement => {
   const {
     mastheadImage: {
       localMasthead: {
-        childImageSharp: { fluid },
+        childImageSharp: { gatsbyImageData },
       },
     },
   } = useStaticQuery(graphql`
@@ -19,21 +21,26 @@ const Masthead: FC<MastheadProps> = (props: MastheadProps): ReactElement => {
       mastheadImage {
         localMasthead {
           childImageSharp {
-            fluid(quality: 90, maxWidth: 3072) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(
+              breakpoints: [750, 1080, 1366, 1920, 2560, 3072]
+              formats: [AUTO]
+              layout: FULL_WIDTH
+              placeholder: BLURRED
+              quality: 90
+            )
           }
         }
       }
     }
   `);
+  const bgImage = convertToBgImage(getImage(gatsbyImageData));
 
   return (
     <BackgroundImage
       Tag="header"
       className="masthead"
-      fluid={fluid}
       backgroundColor="#040e18"
+      {...bgImage} // eslint-disable-line react/jsx-props-no-spreading
     >
       <>{children}</>
     </BackgroundImage>

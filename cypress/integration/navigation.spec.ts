@@ -11,16 +11,12 @@ describe('Navigation', () => {
   context('desktop', () => {
     it('should display navigation links', () => {
       cy.visit('/');
-      cy.get('nav')
-        .findByRole('link', { name: 'DChu' })
-        .should('not.exist');
+      cy.get('nav').findByRole('link', { name: 'DChu' }).should('not.exist');
       cy.get('nav')
         .findByRole('button', { name: 'Toggle navigation' })
         .should('not.exist');
       navLinkNames.forEach((name) => {
-        cy.get('nav')
-          .findByRole('link', { name })
-          .should('be.visible');
+        cy.get('nav').findByRole('link', { name }).should('be.visible');
       });
       socialLinks.forEach(({ name, url }) => {
         cy.get('nav')
@@ -35,13 +31,9 @@ describe('Navigation', () => {
 
     it('should display logo only after scrolling down', () => {
       cy.visit('/');
-      cy.get('nav')
-        .findByRole('link', { name: 'DChu' })
-        .should('not.exist');
+      cy.get('nav').findByRole('link', { name: 'DChu' }).should('not.exist');
       cy.scrollTo(0, 400);
-      cy.get('nav')
-        .findByRole('link', { name: 'DChu' })
-        .should('be.visible');
+      cy.get('nav').findByRole('link', { name: 'DChu' }).should('be.visible');
     });
   });
 
@@ -52,38 +44,28 @@ describe('Navigation', () => {
 
     const assertNavMenuVisible = () => {
       navLinkNames.forEach((name) => {
-        cy.get('nav')
-          .findByRole('link', { name })
-          .should('be.visible');
+        cy.get('nav').findByRole('link', { name }).should('be.visible');
       });
     };
 
     const assertNavMenuHidden = () => {
       navLinkNames.forEach((name) => {
-        cy.get('nav')
-          .findByRole('link', { name })
-          .should('not.exist');
+        cy.get('nav').findByRole('link', { name }).should('not.exist');
       });
     };
 
     it('should display and hide navigation menu when clicking `Toggle navigation` button', () => {
       cy.visit('/');
-      cy.get('nav')
-        .findByRole('link', { name: 'DChu' })
-        .should('be.visible');
+      cy.get('nav').findByRole('link', { name: 'DChu' }).should('be.visible');
       cy.get('nav')
         .findByRole('button', { name: 'Toggle navigation' })
         .should('be.visible');
       assertNavMenuHidden();
 
-      cy.get('nav')
-        .findByRole('button', { name: 'Toggle navigation' })
-        .click();
+      cy.get('nav').findByRole('button', { name: 'Toggle navigation' }).click();
       assertNavMenuVisible();
 
-      cy.get('nav')
-        .findByRole('button', { name: 'Toggle navigation' })
-        .click();
+      cy.get('nav').findByRole('button', { name: 'Toggle navigation' }).click();
       assertNavMenuHidden();
     });
 
@@ -97,9 +79,7 @@ describe('Navigation', () => {
           .click();
         assertNavMenuVisible();
 
-        cy.get('nav')
-          .findByRole('link', { name })
-          .click();
+        cy.get('nav').findByRole('link', { name }).click();
         assertNavMenuHidden();
       });
     });

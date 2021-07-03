@@ -11,14 +11,21 @@ jest.mock('short-uuid');
   mastheadImage: {
     localMasthead: {
       childImageSharp: {
-        fluid: {
-          base64: 'test-base64',
-          aspectRatio: 1.5,
-          src: 'test-src',
-          srcSet: 'test-srcSet',
-          srcWebp: 'test-srcWebp',
-          srcSetWebp: 'test-srcSetWebp',
-          sizes: 'test-sizes',
+        gatsbyImageData: {
+          layout: 'fullWidth',
+          placeholder: {
+            fallback: 'test-base64',
+          },
+          images: {
+            fallback: {
+              src: 'test-src',
+              srcSet: 'test-srcSet',
+              sizes: '100vw',
+            },
+            sources: [],
+          },
+          width: 1,
+          height: 0.6666666666666666,
         },
       },
     },
