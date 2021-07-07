@@ -22,6 +22,21 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/pages`,
+      },
+    },
+    'gatsby-plugin-image',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: ['gatsby-remark-preprocess'],
+      },
+    },
+    {
       resolve: 'gatsby-plugin-remote-images',
       options: {
         nodeType: 'MastheadImage',
@@ -29,8 +44,14 @@ module.exports = {
         name: 'localMasthead',
       },
     },
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
+    {
+      resolve: 'gatsby-plugin-remote-images',
+      options: {
+        nodeType: 'MarkdownRemark',
+        imagePath: 'frontmatter.thumbnail',
+        name: 'thumbnail',
+      },
+    },
     'gatsby-plugin-sass',
     'gatsby-plugin-offline',
     'gatsby-plugin-typescript',

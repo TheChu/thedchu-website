@@ -7,73 +7,6 @@ import Masthead from '../components/Masthead';
 import Scroll from '../components/Scroll';
 import logo from '../assets/img/thedchu-logo.svg';
 
-// This won't be user later anyways
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-// @ts-ignore
-import fullsize1 from '../assets/images/portfolio/fullsize/1.jpg';
-// @ts-ignore
-import fullsize2 from '../assets/images/portfolio/fullsize/2.jpg';
-// @ts-ignore
-import fullsize3 from '../assets/images/portfolio/fullsize/3.jpg';
-// @ts-ignore
-import fullsize4 from '../assets/images/portfolio/fullsize/4.jpg';
-// @ts-ignore
-import fullsize5 from '../assets/images/portfolio/fullsize/5.jpg';
-// @ts-ignore
-import fullsize6 from '../assets/images/portfolio/fullsize/6.jpg';
-// @ts-ignore
-import thumbnail1 from '../assets/images/portfolio/thumbnails/1.jpg';
-// @ts-ignore
-import thumbnail2 from '../assets/images/portfolio/thumbnails/2.jpg';
-// @ts-ignore
-import thumbnail3 from '../assets/images/portfolio/thumbnails/3.jpg';
-// @ts-ignore
-import thumbnail4 from '../assets/images/portfolio/thumbnails/4.jpg';
-// @ts-ignore
-import thumbnail5 from '../assets/images/portfolio/thumbnails/5.jpg';
-// @ts-ignore
-import thumbnail6 from '../assets/images/portfolio/thumbnails/6.jpg';
-/* eslint-enable @typescript-eslint/ban-ts-comment */
-
-const imgSet = [
-  {
-    src: fullsize1,
-    thumbnail: thumbnail1,
-    title: 'Category',
-    desc: 'Project Name',
-  },
-  {
-    src: fullsize2,
-    thumbnail: thumbnail2,
-    title: 'Category',
-    desc: 'Project Name',
-  },
-  {
-    src: fullsize3,
-    thumbnail: thumbnail3,
-    title: 'Category',
-    desc: 'Project Name',
-  },
-  {
-    src: fullsize4,
-    thumbnail: thumbnail4,
-    title: 'Category',
-    desc: 'Project Name',
-  },
-  {
-    src: fullsize5,
-    thumbnail: thumbnail5,
-    title: 'Category',
-    desc: 'Project Name',
-  },
-  {
-    src: fullsize6,
-    thumbnail: thumbnail6,
-    title: 'Category',
-    desc: 'Project Name',
-  },
-];
-
 const IndexPage = (): ReactElement => (
   <Layout>
     <Header />
@@ -110,10 +43,7 @@ const IndexPage = (): ReactElement => (
       </div>
     </Masthead>
 
-    <section id="photos" aria-label="photos">
-      <Gallery images={imgSet} />
-    </section>
-
+    <Gallery />
     <Footer />
   </Layout>
 );

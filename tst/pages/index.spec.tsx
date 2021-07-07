@@ -8,6 +8,39 @@ jest.mock('short-uuid');
 (uuid.generate as jest.Mock).mockReturnValue('test-uuid');
 
 (useStaticQuery as jest.Mock).mockReturnValue({
+  allMarkdownRemark: {
+    edges: [
+      {
+        node: {
+          frontmatter: {
+            title: 'Test Title',
+            date: 'June 200X',
+          },
+          thumbnail: {
+            childImageSharp: {
+              gatsbyImageData: {
+                layout: 'constrained',
+                placeholder: {
+                  fallback: 'test-base64',
+                },
+                images: {
+                  fallback: {
+                    src: 'test-src',
+                    srcSet: 'test-srcSet',
+                    sizes: '100vw',
+                  },
+                  sources: [],
+                },
+                width: 1,
+                height: 0.6666666666666666,
+              },
+              original: { src: 'test-src' },
+            },
+          },
+        },
+      },
+    ],
+  },
   mastheadImage: {
     localMasthead: {
       childImageSharp: {

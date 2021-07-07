@@ -4,13 +4,14 @@ exports.sourceNodes = async ({
   createContentDigest,
 }) => {
   const { createNode } = actions;
+  const masthead = `${process.env.CDN_URL}/thedchu-masthead.jpg`;
   await createNode({
     id: createNodeId('masthead-image'),
-    masthead: `${process.env.CDN_URL}/thedchu-masthead.jpg`,
+    masthead,
     internal: {
       type: 'MastheadImage',
       contentDigest: createContentDigest({
-        masthead: `${process.env.CDN_URL}/thedchu-masthead.jpg`,
+        masthead,
       }),
     },
   });

@@ -220,175 +220,67 @@ background-size: cover;
         class="row no-gutters"
       >
         <div
-          class="col-lg-4 col-sm-6"
+          class="col-lg-3 col-sm-6"
         >
           <a
-            class="portfolio-box"
-            href="test-file-stub"
+            aria-label="Test Title"
+            class="photos-box"
+            href="test-src"
           >
-            <img
-              alt="Project Name"
-              class="img-fluid"
-              src="test-file-stub"
-              title="Category"
-            />
             <div
-              class="portfolio-box-caption"
+              class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
+              data-gatsby-image-wrapper=""
+              style="position: relative; overflow: hidden; display: inline-block; vertical-align: top;"
             >
               <div
-                class="project-category text-white-50"
+                style="max-width: 1px; display: block;"
               >
-                Category
+                <img
+                  alt=""
+                  aria-hidden="true"
+                  role="presentation"
+                  src="data:image/svg+xml;charset=utf-8,%3Csvg height='0.6666666666666666' width='1' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
+                  style="max-width: 100%; display: block; position: static;"
+                />
               </div>
-              <div
-                class="project-name"
+              <img
+                alt=""
+                aria-hidden="true"
+                data-placeholder-image=""
+                decoding="async"
+                src="test-base64"
+                style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;"
+              />
+              <img
+                alt="Test Title"
+                data-gatsby-image-ssr=""
+                data-main-image=""
+                data-src="test-src"
+                data-srcset="test-srcSet"
+                decoding="async"
+                loading="lazy"
+                sizes="100vw"
+                style="height: 100%; left: 0px; position: absolute; top: 0px; transform: translateZ(0); transition: opacity 250ms linear; width: 100%; will-change: opacity; opacity: 0;"
+              />
+              <noscript />
+              <script
+                type="module"
               >
-                Project Name
-              </div>
+                const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t){e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset"));const t=e.parentNode.querySelectorAll("source[data-srcset]");for(let e of t)e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset");e.complete&&(e.style.opacity=1)}}
+              </script>
             </div>
-          </a>
-        </div>
-        <div
-          class="col-lg-4 col-sm-6"
-        >
-          <a
-            class="portfolio-box"
-            href="test-file-stub"
-          >
-            <img
-              alt="Project Name"
-              class="img-fluid"
-              src="test-file-stub"
-              title="Category"
-            />
             <div
-              class="portfolio-box-caption"
+              class="photos-box-caption"
             >
               <div
                 class="project-category text-white-50"
               >
-                Category
+                June 200X
               </div>
               <div
                 class="project-name"
               >
-                Project Name
-              </div>
-            </div>
-          </a>
-        </div>
-        <div
-          class="col-lg-4 col-sm-6"
-        >
-          <a
-            class="portfolio-box"
-            href="test-file-stub"
-          >
-            <img
-              alt="Project Name"
-              class="img-fluid"
-              src="test-file-stub"
-              title="Category"
-            />
-            <div
-              class="portfolio-box-caption"
-            >
-              <div
-                class="project-category text-white-50"
-              >
-                Category
-              </div>
-              <div
-                class="project-name"
-              >
-                Project Name
-              </div>
-            </div>
-          </a>
-        </div>
-        <div
-          class="col-lg-4 col-sm-6"
-        >
-          <a
-            class="portfolio-box"
-            href="test-file-stub"
-          >
-            <img
-              alt="Project Name"
-              class="img-fluid"
-              src="test-file-stub"
-              title="Category"
-            />
-            <div
-              class="portfolio-box-caption"
-            >
-              <div
-                class="project-category text-white-50"
-              >
-                Category
-              </div>
-              <div
-                class="project-name"
-              >
-                Project Name
-              </div>
-            </div>
-          </a>
-        </div>
-        <div
-          class="col-lg-4 col-sm-6"
-        >
-          <a
-            class="portfolio-box"
-            href="test-file-stub"
-          >
-            <img
-              alt="Project Name"
-              class="img-fluid"
-              src="test-file-stub"
-              title="Category"
-            />
-            <div
-              class="portfolio-box-caption"
-            >
-              <div
-                class="project-category text-white-50"
-              >
-                Category
-              </div>
-              <div
-                class="project-name"
-              >
-                Project Name
-              </div>
-            </div>
-          </a>
-        </div>
-        <div
-          class="col-lg-4 col-sm-6"
-        >
-          <a
-            class="portfolio-box"
-            href="test-file-stub"
-          >
-            <img
-              alt="Project Name"
-              class="img-fluid"
-              src="test-file-stub"
-              title="Category"
-            />
-            <div
-              class="portfolio-box-caption"
-            >
-              <div
-                class="project-category text-white-50"
-              >
-                Category
-              </div>
-              <div
-                class="project-name"
-              >
-                Project Name
+                Test Title
               </div>
             </div>
           </a>

@@ -21,5 +21,9 @@ module.exports = {
   },
   setupFiles: ['<rootDir>/loadershim.js'],
   collectCoverage: true,
-  collectCoverageFrom: ['src/**/*.{js,jsx,ts,tsx}', 'gatsby-node.js'],
+  collectCoverageFrom: [
+    'src/**/*.{js,jsx,ts,tsx}',
+    'gatsby-node.js',
+    'plugins/**/*.{js,jsx,ts,tsx}',
+  ],
 };
