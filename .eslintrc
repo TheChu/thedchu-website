@@ -33,11 +33,12 @@
       "error",
       { "devDependencies": ["**/*.spec.{js,jsx,ts,tsx}", "cypress/**"] }
     ],
-
     "no-use-before-define": "off",
     "react/jsx-filename-extension": [
       1,
       { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
-    ]
+    ],
+    "react/prop-types": "off",
+    "react/require-default-props": "off"
   }
 }

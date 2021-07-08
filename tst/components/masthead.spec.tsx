@@ -9,7 +9,7 @@ jest.mock('short-uuid');
 
 (useStaticQuery as jest.Mock).mockReturnValue({
   mastheadImage: {
-    localMasthead: {
+    localImage: {
       childImageSharp: {
         gatsbyImageData: {
           layout: 'fullWidth',

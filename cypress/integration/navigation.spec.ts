@@ -1,5 +1,6 @@
+/// <reference types='../support/index' />
+
 describe('Navigation', () => {
-  // TODO: test navigation between pages once `About` page is made/being made
   const navLinkNames = ['About', 'Photos'];
   const socialLinks = [
     { name: 'Instagram', url: 'https://instagram.com/thedchu' },
@@ -11,27 +12,44 @@ describe('Navigation', () => {
   context('desktop', () => {
     it('should display navigation links', () => {
       cy.visit('/');
+      cy.get('nav').findAllByRole('link').should('have.length', 6);
       cy.get('nav').findByRole('link', { name: 'DChu' }).should('not.exist');
       cy.get('nav')
         .findByRole('button', { name: 'Toggle navigation' })
         .should('not.exist');
+
       navLinkNames.forEach((name) => {
         cy.get('nav').findByRole('link', { name }).should('be.visible');
       });
+
       socialLinks.forEach(({ name, url }) => {
         cy.get('nav')
           .findByRole('link', { name })
           .should('be.visible')
-          .then((link) => (<HTMLAnchorElement>link[0]).href)
+          .then((link) => link.prop('href'))
           .then((href) => {
             expect(href).to.eq(url);
           });
       });
     });
 
+    it('should navigate to `About` page when clicking `About`', () => {
+      cy.visit('/');
+      cy.url().should('equal', `${window.location.origin}/`);
+
+      cy.get('nav')
+        .findByRole('link', { name: 'About' })
+        .click()
+        .waitForRouteChange();
+      cy.url().should('equal', `${window.location.origin}/about`);
+    });
+
+    // TODO: Add navigation and scroll tests once dual link/scroll implentation done
+
     it('should display logo only after scrolling down', () => {
       cy.visit('/');
       cy.get('nav').findByRole('link', { name: 'DChu' }).should('not.exist');
+
       cy.scrollTo(0, 400);
       cy.get('nav').findByRole('link', { name: 'DChu' }).should('be.visible');
     });

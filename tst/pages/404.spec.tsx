@@ -9,7 +9,7 @@ jest.mock('short-uuid');
 
 (useStaticQuery as jest.Mock).mockReturnValue({
   mastheadImage: {
-    localMasthead: {
+    localImage: {
       childImageSharp: {
         gatsbyImageData: {
           layout: 'fullWidth',
@@ -46,5 +46,10 @@ describe('404 IndexPage', () => {
   it('should render a link to home page', () => {
     const { getByRole } = render(<IndexPage />);
     expect(getByRole('link', { name: 'Go Home' })).toBeVisible();
+  });
+
+  it('should render footer', () => {
+    const { getByRole } = render(<IndexPage />);
+    expect(getByRole('contentinfo')).toBeVisible();
   });
 });

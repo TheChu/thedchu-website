@@ -1,8 +1,10 @@
 import React, { FC, ReactElement } from 'react';
 import config from '../../config';
 
+// TODO: Improve footer accessibility
+
 const Footer: FC = (): ReactElement => (
-  <footer className="bg-light py-5">
+  <footer className="bg-dark py-5">
     <div className="container">
       <div className="row justify-content-center">
         <div className="col-lg-8 text-center mt-5 mb-lg-0">
@@ -20,7 +22,7 @@ const Footer: FC = (): ReactElement => (
         </div>
       </div>
       <div className="small text-center text-muted">
-        Copyright &copy; 2019 - Gatsby Starter Creative
+        Copyright &copy; 2021 - David Chu
       </div>
     </div>
   </footer>

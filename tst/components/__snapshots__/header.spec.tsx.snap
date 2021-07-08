@@ -110,7 +110,7 @@ exports[`Header should match Header snapshot 1`] = `
           >
             <a
               class="nav-link"
-              href="#about"
+              href="/about"
             >
               About
             </a>

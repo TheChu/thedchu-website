@@ -30,10 +30,17 @@ header.masthead {
 
   .masthead-title {
     fill: $white;
+    margin-bottom: 1rem;
     width: 300px;
   }
 }
 
 header.masthead::after {
   background-attachment: fixed;
+}
+
+header.halfHeight {
+  @include media-breakpoint-up(lg) {
+    height: 50vh;
+  }
 }

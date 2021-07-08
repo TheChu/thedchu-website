@@ -29,7 +29,7 @@ const Gallery: FC = (): ReactElement => {
   `);
 
   return (
-    <section id="photos" aria-label="photos">
+    <section id="photos" className="bg-dark" aria-label="Photos">
       <div className="container-fluid p-0">
         <div className="row no-gutters">
           {edges.map(

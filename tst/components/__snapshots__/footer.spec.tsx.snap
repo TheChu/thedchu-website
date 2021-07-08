@@ -3,7 +3,7 @@
 exports[`Footer should match Footer snapshot 1`] = `
 <DocumentFragment>
   <footer
-    class="bg-light py-5"
+    class="bg-dark py-5"
   >
     <div
       class="container"
@@ -55,7 +55,7 @@ exports[`Footer should match Footer snapshot 1`] = `
       <div
         class="small text-center text-muted"
       >
-        Copyright © 2019 - Gatsby Starter Creative
+        Copyright © 2021 - David Chu
       </div>
     </div>
   </footer>

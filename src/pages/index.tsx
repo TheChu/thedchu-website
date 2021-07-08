@@ -10,7 +10,6 @@ import logo from '../assets/img/thedchu-logo.svg';
 const IndexPage = (): ReactElement => (
   <Layout>
     <Header />
-
     <Masthead>
       <div className="container h-100">
         <div className="row h-100 align-items-center justify-content-center text-center">
@@ -24,7 +23,6 @@ const IndexPage = (): ReactElement => (
                 <use href={`${logo}#thedchu-logo`} />
               </svg>
             </h1>
-            <hr className="divider my-4" />
           </div>
           <div className="col-lg-8 align-self-baseline">
             <p className="text-light font-weight-light mb-5">
@@ -42,7 +40,6 @@ const IndexPage = (): ReactElement => (
         </div>
       </div>
     </Masthead>
-
     <Gallery />
     <Footer />
   </Layout>

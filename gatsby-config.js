@@ -40,8 +40,14 @@ module.exports = {
       resolve: 'gatsby-plugin-remote-images',
       options: {
         nodeType: 'MastheadImage',
-        imagePath: 'masthead',
-        name: 'localMasthead',
+        imagePath: 'url',
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-remote-images',
+      options: {
+        nodeType: 'AboutImage',
+        imagePath: 'url',
       },
     },
     {

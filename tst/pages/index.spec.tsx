@@ -42,7 +42,7 @@ jest.mock('short-uuid');
     ],
   },
   mastheadImage: {
-    localMasthead: {
+    localImage: {
       childImageSharp: {
         gatsbyImageData: {
           layout: 'fullWidth',
@@ -70,5 +70,20 @@ describe('IndexPage', () => {
   it('should match IndexPage snapshot', () => {
     const { asFragment } = render(<IndexPage />);
     expect(asFragment()).toMatchSnapshot();
+  });
+
+  it('should render navigation bar', () => {
+    const { getByRole } = render(<IndexPage />);
+    expect(getByRole('navigation')).toBeVisible();
+  });
+
+  it('should render `Photos` section', () => {
+    const { getByRole } = render(<IndexPage />);
+    expect(getByRole('region', { name: 'Photos' })).toBeVisible();
+  });
+
+  it('should render footer', () => {
+    const { getByRole } = render(<IndexPage />);
+    expect(getByRole('contentinfo')).toBeVisible();
   });
 });

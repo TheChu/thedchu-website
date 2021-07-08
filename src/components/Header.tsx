@@ -4,6 +4,8 @@ import config from '../../config';
 import Scroll from './Scroll';
 import logo from '../assets/img/thedchu-logo.svg';
 
+// TODO: Improve header accessibility
+
 interface HeaderState {
   openMenu: boolean;
   visibilityClass: string;
@@ -94,15 +96,9 @@ export default class Header extends Component<{}, HeaderState> {
           >
             <ul className="navbar-nav ml-auto my-2 my-lg-0">
               <li className="nav-item">
-                <Scroll
-                  onClick={() => this.toggleMenu(!openMenu)}
-                  type="id"
-                  element="about"
-                >
-                  <a className="nav-link" href="#about">
-                    About
-                  </a>
-                </Scroll>
+                <Link to="/about" className="nav-link">
+                  About
+                </Link>
               </li>
               <li className="nav-item">
                 <Scroll

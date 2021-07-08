@@ -20,7 +20,7 @@ describe('Header', () => {
   });
 
   const navigationLinks = [
-    { text: 'About', location: '#about' },
+    { text: 'About', location: '/about' },
     { text: 'Photos', location: '#photos' },
   ];
 
@@ -107,18 +107,16 @@ describe('Header', () => {
       assertNavMenuClosed(getByRole, queryByRole);
     });
 
-    it.each(navigationLinks)(
-      'should hide navigation menu when clicking %s link',
-      (link) => {
-        const { getByRole, queryByRole } = render(<Header />);
-        assertNavMenuClosed(getByRole, queryByRole);
+    // TODO: Equivalent test for About once dual link/scroll implentation done
+    it('should hide navigation menu when clicking `Photos` link', () => {
+      const { getByRole, queryByRole } = render(<Header />);
+      assertNavMenuClosed(getByRole, queryByRole);
 
-        fireEvent.click(getByRole('button', { name: 'Toggle navigation' }));
-        assertNavMenuOpen(getByRole, queryByRole);
+      fireEvent.click(getByRole('button', { name: 'Toggle navigation' }));
+      assertNavMenuOpen(getByRole, queryByRole);
 
-        fireEvent.click(getByRole('link', { name: link.text }));
-        assertNavMenuClosed(getByRole, queryByRole);
-      }
-    );
+      fireEvent.click(getByRole('link', { name: 'Photos' }));
+      assertNavMenuClosed(getByRole, queryByRole);
+    });
   });
 });

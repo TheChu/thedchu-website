@@ -30,8 +30,6 @@ describe('Footer', () => {
 
   it('should render copyright text', () => {
     const { getByText } = render(<Footer />);
-    expect(
-      getByText('Copyright © 2019 - Gatsby Starter Creative')
-    ).toBeVisible();
+    expect(getByText('Copyright © 2021 - David Chu')).toBeVisible();
   });
 });

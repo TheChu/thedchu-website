@@ -6,20 +6,23 @@ import React, { FC, ReactElement, ReactNode } from 'react';
 
 interface MastheadProps {
   children: ReactNode;
+  halfHeight?: boolean;
 }
 
-const Masthead: FC<MastheadProps> = (props: MastheadProps): ReactElement => {
-  const { children } = props;
+const Masthead: FC<MastheadProps> = ({
+  children,
+  halfHeight = false,
+}: MastheadProps): ReactElement => {
   const {
     mastheadImage: {
-      localMasthead: {
+      localImage: {
         childImageSharp: { gatsbyImageData },
       },
     },
   } = useStaticQuery(graphql`
     query {
       mastheadImage {
-        localMasthead {
+        localImage {
           childImageSharp {
             gatsbyImageData(
               breakpoints: [750, 1080, 1366, 1920, 2560, 3072]
@@ -38,7 +41,7 @@ const Masthead: FC<MastheadProps> = (props: MastheadProps): ReactElement => {
   return (
     <BackgroundImage
       Tag="header"
-      className="masthead"
+      className={halfHeight ? 'masthead halfHeight' : 'masthead'}
       backgroundColor="#040e18"
       {...bgImage} // eslint-disable-line react/jsx-props-no-spreading
     >

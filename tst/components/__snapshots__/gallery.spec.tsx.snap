@@ -3,7 +3,8 @@
 exports[`Gallery should match Gallery snapshot 1`] = `
 <DocumentFragment>
   <section
-    aria-label="photos"
+    aria-label="Photos"
+    class="bg-dark"
     id="photos"
   >
     <div
