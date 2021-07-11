@@ -120,7 +120,7 @@ exports[`IndexPage should match IndexPage snapshot 1`] = `
           >
             <a
               class="nav-link"
-              href="#photos"
+              href="/"
             >
               Photos
             </a>
@@ -131,6 +131,7 @@ exports[`IndexPage should match IndexPage snapshot 1`] = `
   </nav>
   <header
     class="masthead gbi--1668593287-test-uuid"
+    id="top"
     style="background-position: center; background-repeat: no-repeat; background-size: cover; position: relative; opacity: 0.99;"
   >
     <style>
@@ -198,7 +199,7 @@ background-size: cover;
           </p>
           <a
             class="btn btn-primary btn-xl js-scroll-trigger"
-            href="#photos"
+            href="/#photos"
           >
             Find Out More
           </a>

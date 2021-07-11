@@ -40,6 +40,7 @@ const Masthead: FC<MastheadProps> = ({
 
   return (
     <BackgroundImage
+      id="top"
       Tag="header"
       className={halfHeight ? 'masthead halfHeight' : 'masthead'}
       backgroundColor="#040e18"

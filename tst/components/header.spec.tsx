@@ -1,12 +1,6 @@
 import { fireEvent, render } from '@testing-library/react';
-import React, { cloneElement } from 'react';
+import React from 'react';
 import Header from '../../src/components/Header';
-import Scroll from '../../src/components/Scroll';
-
-jest.mock('../../src/components/Scroll', () => jest.fn());
-(Scroll as jest.Mock).mockImplementation(({ children, onClick }) => (
-  <>{cloneElement(children, { onClick })}</>
-));
 
 describe('Header', () => {
   it('should match Header snapshot', () => {
@@ -21,7 +15,7 @@ describe('Header', () => {
 
   const navigationLinks = [
     { text: 'About', location: '/about' },
-    { text: 'Photos', location: '#photos' },
+    { text: 'Photos', location: '/' },
   ];
 
   it.each(navigationLinks)('should render %s link', (link) => {
@@ -107,16 +101,18 @@ describe('Header', () => {
       assertNavMenuClosed(getByRole, queryByRole);
     });
 
-    // TODO: Equivalent test for About once dual link/scroll implentation done
-    it('should hide navigation menu when clicking `Photos` link', () => {
-      const { getByRole, queryByRole } = render(<Header />);
-      assertNavMenuClosed(getByRole, queryByRole);
+    it.each(navigationLinks)(
+      'should hide navigation menu when clicking %s link',
+      (link) => {
+        const { getByRole, queryByRole } = render(<Header />);
+        assertNavMenuClosed(getByRole, queryByRole);
 
-      fireEvent.click(getByRole('button', { name: 'Toggle navigation' }));
-      assertNavMenuOpen(getByRole, queryByRole);
+        fireEvent.click(getByRole('button', { name: 'Toggle navigation' }));
+        assertNavMenuOpen(getByRole, queryByRole);
 
-      fireEvent.click(getByRole('link', { name: 'Photos' }));
-      assertNavMenuClosed(getByRole, queryByRole);
-    });
+        fireEvent.click(getByRole('link', { name: link.text }));
+        assertNavMenuClosed(getByRole, queryByRole);
+      }
+    );
   });
 });

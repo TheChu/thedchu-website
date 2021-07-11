@@ -1,7 +1,6 @@
-import { Link } from 'gatsby';
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import React, { Component, ReactElement } from 'react';
 import config from '../../config';
-import Scroll from './Scroll';
 import logo from '../assets/img/thedchu-logo.svg';
 
 // TODO: Improve header accessibility
@@ -65,7 +64,7 @@ export default class Header extends Component<{}, HeaderState> {
               })}
             </ul>
           </div>
-          <Link to="/" className="navbar-brand navbar-item">
+          <AnchorLink to="/#top" className="navbar-brand navbar-item" stripHash>
             <svg
               className="navbar-brand-logo"
               viewBox="0 0 1000 512"
@@ -73,7 +72,7 @@ export default class Header extends Component<{}, HeaderState> {
             >
               <use href={`${logo}#thedchu-logo`} />
             </svg>
-          </Link>
+          </AnchorLink>
 
           <div className="navbar-toggler-container">
             <button
@@ -96,20 +95,24 @@ export default class Header extends Component<{}, HeaderState> {
           >
             <ul className="navbar-nav ml-auto my-2 my-lg-0">
               <li className="nav-item">
-                <Link to="/about" className="nav-link">
+                <AnchorLink
+                  to="/about#top"
+                  className="nav-link"
+                  onAnchorLinkClick={() => this.toggleMenu(!openMenu)}
+                  stripHash
+                >
                   About
-                </Link>
+                </AnchorLink>
               </li>
               <li className="nav-item">
-                <Scroll
-                  onClick={() => this.toggleMenu(!openMenu)}
-                  type="id"
-                  element="photos"
+                <AnchorLink
+                  to="/#photos"
+                  className="nav-link"
+                  onAnchorLinkClick={() => this.toggleMenu(!openMenu)}
+                  stripHash
                 >
-                  <a className="nav-link" href="#photos">
-                    Photos
-                  </a>
-                </Scroll>
+                  Photos
+                </AnchorLink>
               </li>
             </ul>
           </div>

@@ -22,6 +22,12 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-anchor-links',
+      options: {
+        offset: -72,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/pages`,

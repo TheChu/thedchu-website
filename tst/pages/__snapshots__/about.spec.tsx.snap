@@ -120,7 +120,7 @@ exports[`AboutPage should match AboutPage snapshot 1`] = `
           >
             <a
               class="nav-link"
-              href="#photos"
+              href="/"
             >
               Photos
             </a>
@@ -131,6 +131,7 @@ exports[`AboutPage should match AboutPage snapshot 1`] = `
   </nav>
   <header
     class="masthead halfHeight gbi--1668593287-test-uuid"
+    id="top"
     style="background-position: center; background-repeat: no-repeat; background-size: cover; position: relative; opacity: 0.99;"
   >
     <style>
@@ -190,7 +191,7 @@ background-size: cover;
           </p>
           <a
             class="btn btn-primary btn-xl js-scroll-trigger"
-            href="#about"
+            href="/about#about"
           >
             Find Out More
           </a>

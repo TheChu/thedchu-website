@@ -1,10 +1,10 @@
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import React, { ReactElement } from 'react';
 import Footer from '../components/Footer';
 import Gallery from '../components/Gallery';
 import Header from '../components/Header';
 import Layout from '../components/Layout';
 import Masthead from '../components/Masthead';
-import Scroll from '../components/Scroll';
 import logo from '../assets/img/thedchu-logo.svg';
 
 const IndexPage = (): ReactElement => (
@@ -28,14 +28,12 @@ const IndexPage = (): ReactElement => (
             <p className="text-light font-weight-light mb-5">
               hello my name dchu I like to take nice photos, here are some
             </p>
-            <Scroll type="id" element="photos">
-              <a
-                className="btn btn-primary btn-xl js-scroll-trigger"
-                href="#photos"
-              >
-                Find Out More
-              </a>
-            </Scroll>
+            <AnchorLink
+              to="/#photos"
+              className="btn btn-primary btn-xl js-scroll-trigger"
+            >
+              Find Out More
+            </AnchorLink>
           </div>
         </div>
       </div>

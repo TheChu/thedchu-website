@@ -4,6 +4,7 @@ exports[`Masthead should match Masthead snapshot 1`] = `
 <DocumentFragment>
   <header
     class="masthead gbi--1668593287-test-uuid"
+    id="top"
     style="background-position: center; background-repeat: no-repeat; background-size: cover; position: relative; opacity: 0.99;"
   >
     <style>

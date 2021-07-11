@@ -7,7 +7,7 @@ describe('Footer', () => {
       { name: 'Email', url: 'mailto:chu.david.a@gmail.com' },
     ];
 
-    cy.visit('/');
+    cy.visit('/').waitForRouteChange();
     cy.get('footer').findAllByRole('link').should('have.length', 4);
 
     socialLinks.forEach(({ name, url }) => {

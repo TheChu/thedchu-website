@@ -1,11 +1,11 @@
 import { graphql, useStaticQuery } from 'gatsby';
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
 import React, { FC, ReactElement, ReactNode } from 'react';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import Layout from '../components/Layout';
 import Masthead from '../components/Masthead';
-import Scroll from '../components/Scroll';
 
 interface AboutRowProps {
   children: ReactNode;
@@ -71,14 +71,12 @@ const IndexPage = (): ReactElement => {
             </div>
             <div className="col-lg-8 align-self-baseline">
               <p className="text-light font-weight-light mb-5">Welcome!</p>
-              <Scroll type="id" element="about">
-                <a
-                  className="btn btn-primary btn-xl js-scroll-trigger"
-                  href="#about"
-                >
-                  Find Out More
-                </a>
-              </Scroll>
+              <AnchorLink
+                to="/about#about"
+                className="btn btn-primary btn-xl js-scroll-trigger"
+              >
+                Find Out More
+              </AnchorLink>
             </div>
           </div>
         </div>

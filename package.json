@@ -9,6 +9,7 @@
   "dependencies": {
     "gatsby": "^3.8.1",
     "gatsby-background-image": "^1.5.3",
+    "gatsby-plugin-anchor-links": "^1.2.1",
     "gatsby-plugin-image": "^1.8.0",
     "gatsby-plugin-manifest": "^3.8.0",
     "gatsby-plugin-offline": "^4.8.0",
