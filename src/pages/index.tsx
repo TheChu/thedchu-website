@@ -9,7 +9,7 @@ import logo from '../assets/img/thedchu-logo.svg';
 
 const IndexPage = (): ReactElement => (
   <Layout>
-    <Header />
+    <Header hideLogoAtTop />
     <Masthead>
       <div className="container h-100">
         <div className="row h-100 align-items-center justify-content-center text-center">

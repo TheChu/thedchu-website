@@ -99,7 +99,7 @@ exports[`404 IndexPage should match 404 IndexPage snapshot 1`] = `
         </button>
       </div>
       <div
-        class="collapse navbar-collapse "
+        class="collapse navbar-collapse"
         id="navbarResponsive"
       >
         <ul

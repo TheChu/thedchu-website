@@ -24,6 +24,7 @@ describe('Header', () => {
       });
 
       it('should display navigation links', () => {
+        cy.window().its('scrollY').should('equal', 0);
         cy.get('nav').findAllByRole('link').should('have.length', 6);
         cy.get('nav').findByRole('link', { name: 'DChu' }).should('not.exist');
         cy.get('nav')
@@ -46,6 +47,7 @@ describe('Header', () => {
       });
 
       it('should display logo only after scrolling down', () => {
+        cy.window().its('scrollY').should('equal', 0);
         cy.get('nav').findAllByRole('link').should('have.length', 6);
         cy.get('nav').findByRole('link', { name: 'DChu' }).should('not.exist');
 
@@ -72,7 +74,7 @@ describe('Header', () => {
 
       it('should scroll down to `Photos` section when clicking `Photos`', () => {
         cy.window().its('scrollY').should('equal', 0);
-        cy.findByRole('link', { name: 'Photos' }).click();
+        cy.get('nav').findByRole('link', { name: 'Photos' }).click();
         cy.url().should('equal', `${window.location.origin}/`);
         cy.findByRole('region', { name: 'Photos' })
           .then((element) => element[0].offsetTop - 72)
@@ -95,8 +97,13 @@ describe('Header', () => {
           });
       });
 
+      it('should display logo even at top', () => {
+        cy.window().its('scrollY').should('equal', 0);
+        cy.get('nav').findAllByRole('link').should('have.length', 7);
+        cy.get('nav').findByRole('link', { name: 'DChu' }).should('be.visible');
+      });
+
       it('should navigate to `Home` page when clicking logo', () => {
-        cy.scrollTo(0, 400).window().its('scrollY').should('not.equal', 0);
         cy.get('nav')
           .findByRole('link', { name: 'DChu' })
           .click()

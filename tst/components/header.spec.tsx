@@ -46,6 +46,20 @@ describe('Header', () => {
     expect(getByRole('link', { name: 'DChu' })).toHaveAttribute('href', '/');
   });
 
+  it('should not have class `navbar-hide-logo-at-top` by default', () => {
+    const { getByRole } = render(<Header />);
+    expect(getByRole('link', { name: 'DChu' })).not.toHaveClass(
+      'navbar-hide-logo-at-top'
+    );
+  });
+
+  it('should have class `navbar-hide-logo-at-top` when `hideLogoAtTop` option provided', () => {
+    const { getByRole } = render(<Header hideLogoAtTop />);
+    expect(getByRole('link', { name: 'DChu' })).toHaveClass(
+      'navbar-hide-logo-at-top'
+    );
+  });
+
   it('should change navigation bar when scrolling past threshold', () => {
     const { getByRole } = render(<Header />);
     expect(getByRole('navigation')).not.toHaveClass('navbar-scrolled');

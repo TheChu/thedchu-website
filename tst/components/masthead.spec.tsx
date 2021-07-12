@@ -41,4 +41,22 @@ describe('Masthead', () => {
     );
     expect(asFragment()).toMatchSnapshot();
   });
+
+  it('should not have class `halfHeight` by default', () => {
+    const { getByRole } = render(
+      <Masthead>
+        <div className="test div" />
+      </Masthead>
+    );
+    expect(getByRole('banner')).not.toHaveClass('halfHeight');
+  });
+
+  it('should have class `halfHeight` when `halfHeight` option provided', () => {
+    const { getByRole } = render(
+      <Masthead halfHeight>
+        <div className="test div" />
+      </Masthead>
+    );
+    expect(getByRole('banner')).toHaveClass('halfHeight');
+  });
 });

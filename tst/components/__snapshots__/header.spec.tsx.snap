@@ -99,7 +99,7 @@ exports[`Header should match Header snapshot 1`] = `
         </button>
       </div>
       <div
-        class="collapse navbar-collapse "
+        class="collapse navbar-collapse"
         id="navbarResponsive"
       >
         <ul

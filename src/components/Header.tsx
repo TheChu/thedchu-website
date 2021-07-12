@@ -5,13 +5,21 @@ import logo from '../assets/img/thedchu-logo.svg';
 
 // TODO: Improve header accessibility
 
+interface HeaderProps {
+  hideLogoAtTop?: boolean;
+}
+
 interface HeaderState {
   openMenu: boolean;
   visibilityClass: string;
 }
 
-export default class Header extends Component<{}, HeaderState> {
-  constructor(props: {}) {
+export default class Header extends Component<HeaderProps, HeaderState> {
+  static defaultProps = {
+    hideLogoAtTop: false,
+  };
+
+  constructor(props: HeaderProps) {
     super(props);
     this.state = {
       openMenu: false,
@@ -43,7 +51,9 @@ export default class Header extends Component<{}, HeaderState> {
   };
 
   render(): ReactElement {
+    const { hideLogoAtTop } = this.props;
     const { openMenu, visibilityClass } = this.state;
+
     return (
       <nav
         className={`navbar navbar-expand-lg navbar-light fixed-top py-3 ${visibilityClass}`}
@@ -64,7 +74,13 @@ export default class Header extends Component<{}, HeaderState> {
               })}
             </ul>
           </div>
-          <AnchorLink to="/#top" className="navbar-brand navbar-item" stripHash>
+          <AnchorLink
+            to="/#top"
+            className={`navbar-brand navbar-item${
+              hideLogoAtTop ? ' navbar-hide-logo-at-top' : ''
+            }`}
+            stripHash
+          >
             <svg
               className="navbar-brand-logo"
               viewBox="0 0 1000 512"
@@ -77,8 +93,8 @@ export default class Header extends Component<{}, HeaderState> {
           <div className="navbar-toggler-container">
             <button
               onClick={() => this.toggleMenu(!openMenu)}
-              className={`navbar-toggler navbar-toggler-right ${
-                openMenu ? '' : 'collapsed'
+              className={`navbar-toggler navbar-toggler-right${
+                openMenu ? '' : ' collapsed'
               }`}
               type="button"
               aria-controls="navbarResponsive"
@@ -90,7 +106,7 @@ export default class Header extends Component<{}, HeaderState> {
           </div>
 
           <div
-            className={`collapse navbar-collapse ${openMenu ? 'show' : ''}`}
+            className={`collapse navbar-collapse${openMenu ? ' show' : ''}`}
             id="navbarResponsive"
           >
             <ul className="navbar-nav ml-auto my-2 my-lg-0">
