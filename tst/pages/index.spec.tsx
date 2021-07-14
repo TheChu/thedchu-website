@@ -77,6 +77,26 @@ describe('IndexPage', () => {
     expect(getByRole('navigation')).toBeVisible();
   });
 
+  it('should render links in description', () => {
+    const { getByRole } = render(<IndexPage />);
+    expect(getByRole('link', { name: 'below' })).toHaveAttribute(
+      'href',
+      '/#photos'
+    );
+    expect(getByRole('link', { name: 'about me' })).toHaveAttribute(
+      'href',
+      '/about'
+    );
+  });
+
+  it('should render `Scroll down` link', () => {
+    const { getByRole } = render(<IndexPage />);
+    expect(getByRole('link', { name: 'Scroll down' })).toHaveAttribute(
+      'href',
+      '/#photos'
+    );
+  });
+
   it('should render `Photos` section', () => {
     const { getByRole } = render(<IndexPage />);
     expect(getByRole('region', { name: 'Photos' })).toBeVisible();

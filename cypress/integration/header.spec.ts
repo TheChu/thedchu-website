@@ -74,6 +74,7 @@ describe('Header', () => {
 
       it('should scroll down to `Photos` section when clicking `Photos`', () => {
         cy.window().its('scrollY').should('equal', 0);
+
         cy.get('nav').findByRole('link', { name: 'Photos' }).click();
         cy.url().should('equal', `${window.location.origin}/`);
         cy.findByRole('region', { name: 'Photos' })

@@ -173,11 +173,9 @@ background-size: cover;
         class="row h-100 align-items-center justify-content-center text-center"
       >
         <div
-          class="col-lg-10 align-self-end"
+          class="col-lg-6 align-self-end"
         >
-          <h1
-            class="text-uppercase text-white font-weight-bold"
-          >
+          <h1>
             <svg
               aria-label="DChu"
               class="masthead-title"
@@ -188,20 +186,44 @@ background-size: cover;
               />
             </svg>
           </h1>
-        </div>
-        <div
-          class="col-lg-8 align-self-baseline"
-        >
+          <p
+            class="text-light font-weight-light mb-0"
+          >
+            Hi, I'm David Chu. Welcome to my website!
+          </p>
           <p
             class="text-light font-weight-light mb-5"
           >
-            hello my name dchu I like to take nice photos, here are some
+            It's a work in progress, but for now check out a few of my photos 
+            <a
+              href="/#photos"
+            >
+              below
+            </a>
+             or read more 
+            <a
+              href="/about"
+            >
+              about me
+            </a>
+            .
           </p>
+        </div>
+        <div
+          class="col-lg-8 align-self-end"
+        >
           <a
-            class="btn btn-primary btn-xl js-scroll-trigger"
             href="/#photos"
           >
-            Find Out More
+            <svg
+              aria-label="Scroll down"
+              class="masthead-arrow"
+              viewBox="0 0 24 24"
+            >
+              <use
+                href="test-file-stub#arrow"
+              />
+            </svg>
           </a>
         </div>
       </div>

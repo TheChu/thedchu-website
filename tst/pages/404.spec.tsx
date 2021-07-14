@@ -45,7 +45,7 @@ describe('404 IndexPage', () => {
 
   it('should render a link to home page', () => {
     const { getByRole } = render(<IndexPage />);
-    expect(getByRole('link', { name: 'Go Home' })).toBeVisible();
+    expect(getByRole('link', { name: 'Go Home' })).toHaveAttribute('href', '/');
   });
 
   it('should render footer', () => {

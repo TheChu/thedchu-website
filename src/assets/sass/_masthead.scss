@@ -1,20 +1,19 @@
-
 // Styling for the masthead
 header.masthead {
-  padding-top: 10rem;
-  padding-bottom: calc(10rem - #{$navbar-height});
+  padding-top: 5rem;
+  padding-bottom: calc(5rem - #{$navbar-height});
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-size: cover;
+  height: 100vh;
   h1 {
     font-size: 2.25rem;
   }
+
   @include media-breakpoint-up(lg) {
-    height: 100vh;
     min-height: 40rem;
-    padding-top: $navbar-height;
-    padding-bottom: 0;
+    padding-top: $navbar-height !important;
+    padding-bottom: 0 !important;
     p {
       font-size: 1.15rem;
     }
@@ -33,14 +32,23 @@ header.masthead {
     margin-bottom: 1rem;
     width: 300px;
   }
-}
 
-header.masthead::after {
-  background-attachment: fixed;
-}
+  .masthead-arrow {
+    margin-bottom: 30px;
+    width: 50px;
+    stroke: fade-out($white, 0.3);
+    &:hover {
+      stroke: $primary;
+    }
+  }
 
-header.halfHeight {
-  @include media-breakpoint-up(lg) {
+  &.halfHeight {
+    padding-top: 10rem;
+    padding-bottom: calc(10rem - #{$navbar-height});
     height: 50vh;
+  }
+
+  &::after {
+    background-attachment: fixed;
   }
 }

@@ -75,6 +75,14 @@ describe('AboutPage', () => {
     expect(getByRole('navigation')).toBeVisible();
   });
 
+  it('should render `Scroll down` link', () => {
+    const { getByRole } = render(<AboutPage />);
+    expect(getByRole('link', { name: 'Scroll down' })).toHaveAttribute(
+      'href',
+      '/about#about'
+    );
+  });
+
   it('should render `About` section', () => {
     const { getByRole } = render(<AboutPage />);
     expect(getByRole('region', { name: 'About' })).toBeVisible();

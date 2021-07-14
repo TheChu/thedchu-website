@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import Header from '../components/Header';
 import Layout from '../components/Layout';
 import Masthead from '../components/Masthead';
+import arrow from '../assets/img/arrow.svg';
 
 interface AboutRowProps {
   children: ReactNode;
@@ -68,14 +69,17 @@ const IndexPage = (): ReactElement => {
           <div className="row h-100 align-items-center justify-content-center text-center">
             <div className="col-lg-10 align-self-end">
               <h1 className="text-white font-weight-bold">About me</h1>
-            </div>
-            <div className="col-lg-8 align-self-baseline">
               <p className="text-light font-weight-light mb-5">Welcome!</p>
-              <AnchorLink
-                to="/about#about"
-                className="btn btn-primary btn-xl js-scroll-trigger"
-              >
-                Find Out More
+            </div>
+            <div className="col-lg-8 align-self-end">
+              <AnchorLink to="/about#about">
+                <svg
+                  className="masthead-arrow"
+                  viewBox="0 0 24 24"
+                  aria-label="Scroll down"
+                >
+                  <use href={`${arrow}#arrow`} />
+                </svg>
               </AnchorLink>
             </div>
           </div>
