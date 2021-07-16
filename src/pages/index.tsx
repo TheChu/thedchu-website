@@ -1,6 +1,7 @@
 import { Link } from 'gatsby';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import React, { ReactElement } from 'react';
+import SVG from 'react-inlinesvg';
 import Footer from '../components/Footer';
 import Gallery from '../components/Gallery';
 import Header from '../components/Header';
@@ -17,13 +18,14 @@ const IndexPage = (): ReactElement => (
         <div className="row h-100 align-items-center justify-content-center text-center">
           <div className="col-lg-6 align-self-end">
             <h1>
-              <svg
+              <SVG
+                src={logo}
                 className="masthead-title"
                 viewBox="0 0 1000 512"
+                width="auto"
+                height="auto"
                 aria-label="DChu"
-              >
-                <use href={`${logo}#thedchu-logo`} />
-              </svg>
+              />
             </h1>
             <p className="text-light font-weight-light mb-0">
               Hi, I&apos;m David Chu. Welcome to my website!
@@ -36,13 +38,14 @@ const IndexPage = (): ReactElement => (
           </div>
           <div className="col-lg-8 align-self-end">
             <AnchorLink to="/#photos">
-              <svg
+              <SVG
+                src={arrow}
                 className="masthead-arrow"
                 viewBox="0 0 24 24"
+                width="auto"
+                height="auto"
                 aria-label="Scroll down"
-              >
-                <use href={`${arrow}#arrow`} />
-              </svg>
+              />
             </AnchorLink>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import React, { Component, ReactElement } from 'react';
+import SVG from 'react-inlinesvg';
 import config from '../../config';
 import logo from '../assets/img/thedchu-logo.svg';
 
@@ -81,13 +82,14 @@ export default class Header extends Component<HeaderProps, HeaderState> {
             }`}
             stripHash
           >
-            <svg
+            <SVG
+              src={logo}
               className="navbar-brand-logo"
               viewBox="0 0 1000 512"
+              width="auto"
+              height="auto"
               aria-label="DChu"
-            >
-              <use href={`${logo}#thedchu-logo`} />
-            </svg>
+            />
           </AnchorLink>
 
           <div className="navbar-toggler-container">

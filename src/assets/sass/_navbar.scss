@@ -41,6 +41,9 @@
       &:hover {
         fill: $white;
       }
+      path {
+        fill: unset;
+      }
     }
     .navbar-hide-logo-at-top {
       visibility: hidden;

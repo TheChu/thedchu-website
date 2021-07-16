@@ -76,12 +76,11 @@ exports[`404 IndexPage should match 404 IndexPage snapshot 1`] = `
         <svg
           aria-label="DChu"
           class="navbar-brand-logo"
+          height="auto"
+          id="test-file-stub"
           viewBox="0 0 1000 512"
-        >
-          <use
-            href="test-file-stub#thedchu-logo"
-          />
-        </svg>
+          width="auto"
+        />
       </a>
       <div
         class="navbar-toggler-container"

@@ -2,6 +2,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
 import React, { FC, ReactElement, ReactNode } from 'react';
+import SVG from 'react-inlinesvg';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import Layout from '../components/Layout';
@@ -73,13 +74,14 @@ const IndexPage = (): ReactElement => {
             </div>
             <div className="col-lg-8 align-self-end">
               <AnchorLink to="/about#about">
-                <svg
+                <SVG
+                  src={arrow}
                   className="masthead-arrow"
                   viewBox="0 0 24 24"
+                  width="auto"
+                  height="auto"
                   aria-label="Scroll down"
-                >
-                  <use href={`${arrow}#arrow`} />
-                </svg>
+                />
               </AnchorLink>
             </div>
           </div>

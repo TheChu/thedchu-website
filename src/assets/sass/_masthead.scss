@@ -31,6 +31,9 @@ header.masthead {
     fill: $white;
     margin-bottom: 1rem;
     width: 300px;
+    path {
+      fill: unset;
+    }
   }
 
   .masthead-arrow {
